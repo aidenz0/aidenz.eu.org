@@ -1,0 +1,41 @@
+name: Build and Deploy Hugo Site
+
+on:
+  push:
+    branches:
+      - main  # 当推送到 main 分支时触发
+  pull_request:
+    branches:
+      - main  # 当向 main 分支发起 PR 时触发
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # 检出源代码
+      - name: Checkout source code
+        uses: actions/checkout@v2
+
+      # 设置 Hugo
+      - name: Set up Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.145.0'  # 设置 Hugo 版本，可以修改为你的需求版本
+
+      # 编译 Hugo 网站
+      - name: Build the site
+        run: |
+          hugo --minify  # 编译静态网站，并进行最小化
+
+      # 部署到静态文件仓库
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.1.0
+        with:
+          branch: main  # 推送到目标仓库的 `main` 分支
+          folder: public  # 将 Hugo 输出的 `public` 文件夹作为静态文件
+          repository-name: aidenz0/aidenz.eu.org-public  # 目标静态文件仓库的名字
+
+        # GitHub token 用于访问目标仓库
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
