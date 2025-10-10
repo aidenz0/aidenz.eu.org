@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title> - 我的全新 Hugo 网站</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/%E5%A4%9A%E6%80%81%E7%BB%A7%E6%89%BF%E5%92%8C%E5%B0%81%E8%A3%85/">
+  <meta property="og:site_name" content="我的全新 Hugo 网站">
+  <meta property="og:title" content="我的全新 Hugo 网站">
+  <meta property="og:description" content="多态、继承和封装 封装 封装从字面上来理解就是包装的意思，专业点就是信息隐藏，是指利用抽象将数据和基于数据的操作封装在一起，使其构成一个不可分割的独立实体。
+数据被保护在类的内部，尽可能地隐藏内部的实现细节，只保留一些对外接口使之与外部发生联系。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="我的全新 Hugo 网站">
+  <meta name="twitter:description" content="多态、继承和封装 封装 封装从字面上来理解就是包装的意思，专业点就是信息隐藏，是指利用抽象将数据和基于数据的操作封装在一起，使其构成一个不可分割的独立实体。
+数据被保护在类的内部，尽可能地隐藏内部的实现细节，只保留一些对外接口使之与外部发生联系。">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/%E5%A4%9A%E6%80%81%E7%BB%A7%E6%89%BF%E5%92%8C%E5%B0%81%E8%A3%85/" /><link rel="next" href="//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/%E4%B8%8D%E5%8F%AF%E5%8F%98%E5%AF%B9%E8%B1%A1/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/\/localhost:1313\/posts\/java%E5%9F%BA%E7%A1%80\/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B\/%E5%A4%9A%E6%80%81%E7%BB%A7%E6%89%BF%E5%92%8C%E5%B0%81%E8%A3%85\/"
+        },"genre": "posts","wordcount":  4464 ,
+        "url": "\/\/localhost:1313\/posts\/java%E5%9F%BA%E7%A1%80\/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B\/%E5%A4%9A%E6%80%81%E7%BB%A7%E6%89%BF%E5%92%8C%E5%B0%81%E8%A3%85\/","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "xxxx"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="我的全新 Hugo 网站">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="我的全新 Hugo 网站">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX"></h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>xxxx</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="0001-01-01">0001-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;4464 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;9 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#多态继承和封装">多态、继承和封装</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h3 id="多态继承和封装">多态、继承和封装</h3>
+<h4 id="封装">封装</h4>
+<p>封装从字面上来理解就是包装的意思，专业点就是信息隐藏，<strong>是指利用抽象将数据和基于数据的操作封装在一起，使其构成一个不可分割的独立实体</strong>。</p>
+<p>数据被保护在类的内部，尽可能地隐藏内部的实现细节，只保留一些对外接口使之与外部发生联系。</p>
+<p>其他对象只能通过已经授权的操作来与这个封装的对象进行交互。也就是说用户是无需知道对象内部的细节（当然也无从知道），但可以通过该对象对外的提供的接口来访问该对象。</p>
+<p>使用封装有 4 大好处：</p>
+<ul>
+<li>1、良好的封装能够减少耦合。</li>
+<li>2、类内部的结构可以自由修改。</li>
+<li>3、可以对成员进行更精确的控制。</li>
+<li>4、隐藏信息，实现细节。</li>
+</ul>
+<h4 id="继承">继承</h4>
+<p><strong>继承</strong>（英语：inheritance）是面向对象软件技术中的一个概念。它使得<strong>复用以前的代码非常容易。</strong></p>
+<p>Java 语言是非常典型的面向对象的语言，在 Java 语言中<strong>继承就是子类继承父类的属性和方法，使得子类对象（实例）具有父类的属性和方法，或子类从父类继承方法，使得子类具有父类相同的方法</strong>。
+继承的优势：可以直接使用父类的属性和方法，自己也可以有自己新的属性和方法满足拓展，父类的方法如果自己有需求更改也可以重写。这样<strong>使用继承不仅大大的减少了代码量，也使得代码结构更加清晰可见</strong>。
+继承分为单继承和多继承，Java 语言只支持类的单继承，但可以通过实现接口的方式达到多继承的目的。</p>
+<h5 id="单继承">单继承</h5>
+<p>![[Pasted image 20250901101622.png]]
+<strong>单继承在类层次结构上比较清晰，但缺点是结构的丰富度有时不能满足使用需求</strong>。</p>
+<h5 id="多继承">多继承</h5>
+<p>![[Pasted image 20250901101655.png]]
+多继承，一个子类有多个直接的父类。这样做的好处是子类拥有所有父类的特征，<strong>子类的丰富度很高，但是缺点就是容易造成混乱</strong>
+Java 虽然不支持多继承，但是 Java 有三种实现多继承效果的方式，<strong>分别是</strong>内部类、多层继承和实现接口。
+内部类可以继承一个与外部类无关的类，保证了内部类的独立性，正是基于这一点，可以达到多继承的效果。
+**多层继承：<strong>子类继承父类，父类如果还继承其他的类，那么这就叫多层继承</strong>。这样子类就会拥有所有被继承类的属性和方法。
+实现接口无疑是满足多继承使用需求的最好方式，一个类可以实现多个接口满足自己在丰富性和复杂环境的使用需求。
+类和接口相比，**类就是一个实体，有属性和方法，而接口更倾向于一组方法**。</p>
+<h5 id="如何实现继承">如何实现继承</h5>
+<h6 id="extends-关键字">extends 关键字</h6>
+<p>子类继承父类后，就拥有父类的非私有的<strong>属性和方法</strong>。</p>
+<h6 id="implements-关键字">implements 关键字</h6>
+<p>使用 implements 关键字可以变相使 Java 拥有多继承的特性，使用范围为类实现接口的情况，一个类可以实现多个接口(接口与接口之间用逗号分开)。</p>
+<h5 id="继承的特点">继承的特点</h5>
+<p>继承的主要内容就是子类继承父类，并重写父类的方法。使用子类的属性或方法时候，首先要创建一个对象，而对象通过构造方法去创建，在构造方法中我们可能会调用子父类的一些属性和方法，所以就需要提前掌握  this 和 super 关键字。
+创建完这个对象之后，再调用<strong>重写</strong>父类后的方法，</p>
+<h6 id="构造方法">构造方法</h6>
+<p>是一种特殊的方法，<strong>它是一个与类同名的方法</strong>。在继承中<strong>构造方法是一种比较特殊的方法</strong>（比如不能继承），所以要了解和学习在继承中构造方法的规则和要求。</p>
+<p>继承中的构造方法有以下几点需要注意：</p>
+<p><strong>父类的构造方法不能被继承：</strong></p>
+<p>因为构造方法语法是<strong>与类同名</strong>，而继承则不更改方法名，如果子类继承父类的构造方法，那明显与构造方法的语法冲突了。比如 Father 类的构造方法名为 Father()，Son 类如果继承 Father 类的构造方法 Father()，那就和构造方法定义：<strong>构造方法与类同名</strong>冲突了，所以在子类中不能继承父类的构造方法，但子类会调用父类的构造方法。</p>
+<p><strong>子类的构造过程必须调用其父类的构造方法：</strong></p>
+<p>Java 虚拟机<strong>构造子类对象前会先构造父类对象，父类对象构造完成之后再来构造子类特有的属性，这被称为内存叠加</strong>。
+<strong>如果子类的构造方法中没有显示地调用父类构造方法，则系统默认调用父类无参数的构造方法。</strong></p>
+<h6 id="方法重写">方法重写</h6>
+<p>也就是子类中出现和父类中一模一样的方法(包括返回值类型，方法名，参数列表)，它建立在继承的基础上。你可以理解为方法的<strong>外壳不变，但是核心内容重写</strong>。</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">E1</span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doA</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;这是父类的方法&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">class</span> <span class="nc">E2</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">E1</span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doA</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;我重写父类方法，这是子类的方法&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div></div>
+<h5 id="继承与修饰符">继承与修饰符</h5>
+<p>Java 修饰符的作用就是对类或类成员进行修饰或限制，每个修饰符都有自己的作用，而在继承中可能有些特殊修饰符使得被修饰的属性或方法不能被继承，或者继承需要一些其他的条件。</p>
+<p>Java 语言提供了很多修饰符，修饰符用来定义类、方法或者变量，通常放在语句的最前端。主要分为以下两类：</p>
+<ul>
+<li>访问权限修饰符，也就是 public、private、protected 等</li>
+<li>非访问修饰符，也就是 static、final、abstract 等</li>
+</ul>
+<h6 id="访问修饰符">访问修饰符</h6>
+<p>Java 子类重写继承的方法时，<strong>不可以降低方法的访问权限</strong>，<strong>子类继承父类的访问修饰符作用域不能比父类小</strong>，也就是更加开放，假如父类是 protected 修饰的，其子类只能是 protected 或者 public，绝对不能是 default(默认的访问范围)或者 private。所以在继承中需要重写的方法不能使用 private 修饰词修饰。
+<strong>继承当中子类抛出的异常必须是父类抛出的异常或父类抛出异常的子异常</strong>。</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">B1</span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doA</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="p">{}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doB</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="p">{}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doC</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="p">{}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doD</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="p">{}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">class</span> <span class="nc">B2</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">B1</span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">//异常范围和父类可以一致</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doA</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">//异常范围可以比父类更小</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doB</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">//异常范围 不可以比父类范围更大</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doC</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="c1">//不可抛出Exception等比IOException更大的异常</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doD</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div></div>
+<h6 id="非访问修饰符">非访问修饰符</h6>
+<p>访问修饰符用来控制访问权限，而非访问修饰符每个都有各自的作用，下面针对 static、final、abstract 修饰符进行介绍。</p>
+<p>static 修饰符</p>
+<p>static 翻译为“静态的”，能够与变量，方法和类一起使用，<strong>称为静态变量，静态方法(也称为类变量、类方法)</strong>。如果在一个类中使用 static 修饰变量或者方法的话，它们<strong>可以直接通过类访问，不需要创建一个类的对象来访问成员。</strong></p>
+<p>我们在设计类的时候可能会使用静态方法，有很多工具类比如<code>Math</code>，<code>Arrays</code>等类里面就写了很多静态方法。</p>
+<p>final 修饰符</p>
+<p>final 变量：</p>
+<ul>
+<li>final 表示&quot;最后的、最终的&quot;含义，<strong>变量一旦赋值后，不能被重新赋值</strong>。被 final 修饰的实例变量必须显式指定初始值(即不能只声明)。final 修饰符通常和 static 修饰符一起使用来创建类常量。
+final 方法：</li>
+<li><strong>父类中的 final 方法可以被子类继承，但是不能被子类重写</strong>。声明 final 方法的主要目的是防止该方法的内容被修改。
+final 类：</li>
+<li><strong>final 类不能被继承</strong>，没有类能够继承 final 类的任何特性。
+所以无论是变量、方法还是类被 final 修饰之后，都有代表最终、最后的意思。内容无法被修改。</li>
+</ul>
+<p>abstract 修饰符
+abstract 英文名为“抽象的”，主要用来修饰类和方法，称为抽象类和抽象方法。</p>
+<p><strong>抽象方法</strong>：有很多不同类的方法是相似的，但是具体内容又不太一样，所以我们只能抽取他的声明，没有具体的方法体，即抽象方法可以表达概念但无法具体实现。</p>
+<p><strong>抽象类</strong>：<strong>有抽象方法的类必须是抽象类</strong>，抽象类可以表达概念但是无法构造实体的类。</p>
+<h5 id="object-类和转型">Object 类和转型</h5>
+<p>提到 Java 继承，不得不提及所有类的根类：Object(java.lang.Object)类，如果一个类没有显式声明它的父类（即没有写 extends xx），那么默认这个类的父类就是 Object 类，任何类都可以使用 Object 类的方法，创建的类也可和 Object 进行向上、向下转型，所以 Object 类是掌握和理解继承所必须的知识点。</p>
+<p>Java 向上和向下转型在 Java 中运用很多，也是建立在继承的基础上，所以 Java 转型也是掌握和理解继承所必须的知识点。</p>
+<h6 id="object-类概述">Object 类概述</h6>
+<ol>
+<li>Object 是类层次结构的<strong>根类</strong>，所有的类都隐式的继承自 Object 类。</li>
+<li>Java 中，所有的对象都拥有 Object 的默认方法。</li>
+<li>Object 类有一个构造方法，并且是<strong>无参构造方法</strong>。</li>
+</ol>
+<p>Object 是 Java 所有类的父类，是整个类继承结构的顶端，也是最抽象的一个类。</p>
+<p>像 toString()、equals()、hashCode()、wait()、notify()、getClass()等都是 Object 的方法。你以后可能会经常碰到，但其中遇到更多的就是 toString()方法和 equals()方法，我们经常需要重写这两种方法满足我们的使用需求。</p>
+<p>toString()方法表示返回该对象的字符串，由于各个对象构造不同所以需要重写，如果不重写的话默认返回<code>类名@hashCode</code>格式。</p>
+<p><strong>如果重写 toString()方法后</strong>直接调用 toString()方法就可以返回我们自定义的该类转成字符串类型的内容输出，而不需要每次都手动的拼凑成字符串内容输出，大大简化输出操作。</p>
+<p>equals()方法主要比较两个对象是否相等，因为对象的相等不一定非要严格要求两个对象地址上的相同，有时内容上的相同我们就会认为它相等，比如 String 类就重写了 euqals()方法，通过<a href="https://javabetter.cn/string/equals.html" target="_blank" rel="noopener noreffer ">字符串的内容比较是否相等</a>。</p>
+<h6 id="向上转型">向上转型</h6>
+<p><strong>向上转型</strong> : 通过子类对象(小范围)实例化父类对象(大范围)，这种属于自动转换。用一张图就能很好地表示向上转型的逻辑：
+![[Pasted image 20250904113706.png]]
+父类引用变量指向子类对象后，只能使用父类已声明的方法，但方法如果被重写会执行子类的方法，如果方法未被重写那么将执行父类的方法。</p>
+<h6 id="向下转型">向下转型</h6>
+<p><strong>向下转型</strong> : 通过父类对象(大范围)实例化子类对象(小范围)，在书写上父类对象需要加括号<code>()</code>强制转换为子类类型。但父类引用变量实际引用必须是子类对象才能成功转型，这里也用一张图就能很好表示向下转型的逻辑：
+![[Pasted image 20250904113834.png]]</p>
+<h5 id="子父类初始化顺序">子父类初始化顺序</h5>
+<p>在 Java 继承中，父子类初始化先后顺序为：</p>
+<ol>
+<li>父类中静态成员变量和静态代码块</li>
+<li>子类中静态成员变量和静态代码块</li>
+<li>父类中普通成员变量和代码块，父类的构造方法</li>
+<li>子类中普通成员变量和代码块，子类的构造方法</li>
+</ol>
+<p>总的来说，就是<strong>静态&gt;非静态，父类&gt;子类，非构造方法&gt;构造方法</strong>。同一类别（例如普通变量和普通代码块）成员变量和代码块执行从前到后，需要注意逻辑。</p>
+<p>这个也不难理解，静态变量也称类变量，可以看成一个全局变量，静态成员变量和静态代码块在类加载的时候就初始化，而非静态变量和代码块在对象创建的时候初始化。所以静态快于非静态初始化。</p>
+<p>而在创建子类对象的时候需要先创建父类对象，所以父类优先于子类。</p>
+<p>而在调用构造方法的时候，是对成员变量进行一些初始化操作，所以普通成员变量和代码块优于构造方法执行。</p>
+<h4 id="多态">多态</h4>
+<p>Java 的多态是指在面向对象编程中，同一个类的对象在不同情况下表现出来的不同行为和状态。</p>
+<ul>
+<li>子类可以继承父类的字段和方法，子类对象可以直接使用父类中的方法和字段（私有的不行）。</li>
+<li>子类可以重写从父类继承来的方法，使得子类对象调用这个方法时表现出不同的行为。</li>
+<li>可以将子类对象赋给父类类型的引用，这样就可以通过父类类型的引用调用子类中重写的方法，实现多态。</li>
+</ul>
+<p>多态的目的是为了提高代码的灵活性和可扩展性，使得代码更容易维护和扩展。</p>
+<p>比如说，通过允许子类继承父类的方法并重写，增强了代码的复用性。</p>
+<p>再比如说多态可以实现动态绑定，这意味着程序在运行时再确定对象的方法调用也不迟。</p>
+<h5 id="多态是什么">多态是什么</h5>
+<p>Java 的多态是什么？其实就是一种能力——同一个行为具有不同的表现形式；换句话说就是，执行一段代码，Java 在运行时能根据对象类型的不同产生不同的结果。和孙悟空和二郎神都只需要喊一声“变”，然后就变了，并且每次变得还不一样；一个道理。</p>
+<p>多态的前提条件有三个：</p>
+<ul>
+<li>子类继承父类</li>
+<li>子类重写父类的方法</li>
+<li>父类引用指向子类的对象</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 0001-01-01</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on X" data-sharer="x" data-url="//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/%E5%A4%9A%E6%80%81%E7%BB%A7%E6%89%BF%E5%92%8C%E5%B0%81%E8%A3%85/" data-title=""><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Threads" data-sharer="threads" data-url="//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/%E5%A4%9A%E6%80%81%E7%BB%A7%E6%89%BF%E5%92%8C%E5%B0%81%E8%A3%85/" data-title=""><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/%E5%A4%9A%E6%80%81%E7%BB%A7%E6%89%BF%E5%92%8C%E5%B0%81%E8%A3%85/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/%E5%A4%9A%E6%80%81%E7%BB%A7%E6%89%BF%E5%92%8C%E5%B0%81%E8%A3%85/" data-title=""><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/%E5%A4%9A%E6%80%81%E7%BB%A7%E6%89%BF%E5%92%8C%E5%B0%81%E8%A3%85/" data-title=""><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/%E5%A4%9A%E6%80%81%E7%BB%A7%E6%89%BF%E5%92%8C%E5%B0%81%E8%A3%85/" data-title=""><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Diaspora" data-sharer="diaspora" data-url="//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/%E5%A4%9A%E6%80%81%E7%BB%A7%E6%89%BF%E5%92%8C%E5%B0%81%E8%A3%85/" data-title="" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=%2f%2flocalhost%3a1313%2fposts%2fjava%25E5%259F%25BA%25E7%25A1%2580%2f%25E9%259D%25A2%25E5%2590%2591%25E5%25AF%25B9%25E8%25B1%25A1%25E7%25BC%2596%25E7%25A8%258B%2f%25E5%25A4%259A%25E6%2580%2581%25E7%25BB%25A7%25E6%2589%25BF%25E5%2592%258C%25E5%25B0%2581%25E8%25A3%2585%2f&amp;text=" target="_blank" title="Share on Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav">
+            <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/%E4%B8%8D%E5%8F%AF%E5%8F%98%E5%AF%B9%E8%B1%A1/" class="next" rel="next" title=""><i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">xxxx</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script>window.config={"comment":{}};</script><script src="/js/theme.min.js"></script></body>
+</html>
