@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "git test.md",
+                "file": "content/posts/test.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "git test"
+              "title": "test"
             }
           }
         ]
@@ -179,6 +179,11 @@
   },
   "active": "fa60871b4601c0f8",
   "lastOpenFiles": [
-    "git test.md"
+    "public/posts/index.xml",
+    "public/posts/index.html",
+    "public/posts",
+    "git test.md",
+    "content/posts/test.md",
+    "content/posts"
   ]
 }

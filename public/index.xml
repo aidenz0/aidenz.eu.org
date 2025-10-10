@@ -1,9 +1,9 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Hugo 网站</title>
+        <title>我的全新 Hugo 网站</title>
         <link>//localhost:1313/</link>
         <description>This is my cool site</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 10 Oct 2025 09:34:27 &#43;0800</lastBuildDate>
             <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
         </channel>
 </rss>
