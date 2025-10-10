@@ -179,11 +179,19 @@
   },
   "active": "fa60871b4601c0f8",
   "lastOpenFiles": [
-    "public/posts/index.xml",
-    "public/posts/index.html",
-    "public/posts",
+    "content/posts/java",
+    "public/posts/page/1/index.html",
+    "public/posts/page/1",
+    "public/posts/page",
+    "public/page/1/index.html",
+    "public/page/1",
+    "public/page",
+    "public/posts/test/index.html",
+    "public/posts/test",
+    "public/lib/simple-icons/icons/line.min.svg",
+    "public/lib/simple-icons/icons",
+    "public/lib/simple-icons",
     "git test.md",
-    "content/posts/test.md",
-    "content/posts"
+    "content/posts/test.md"
   ]
 }

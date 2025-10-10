@@ -3,5 +3,13 @@
         <title>All Posts - 我的全新 Hugo 网站</title>
         <link>//localhost:1313/posts/</link>
         <description>All Posts | 我的全新 Hugo 网站</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 10 Oct 2025 09:34:27 &#43;0800</lastBuildDate><atom:link href="//localhost:1313/posts/" rel="self" type="application/rss+xml" /></channel>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 10 Oct 2025 09:34:27 &#43;0800</lastBuildDate><atom:link href="//localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Test</title>
+    <link>//localhost:1313/posts/test/</link>
+    <pubDate>Fri, 10 Oct 2025 09:34:27 &#43;0800</pubDate>
+    <author>xxxx</author>
+    <guid>//localhost:1313/posts/test/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
 </rss>
