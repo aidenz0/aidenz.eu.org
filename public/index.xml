@@ -2,22 +2,29 @@
     <channel>
         <title>我的全新 Hugo 网站</title>
         <link>//localhost:1313/</link>
-        <description>This is my cool site</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 10 Oct 2025 09:34:27 &#43;0800</lastBuildDate>
+        <description>aidenz的个人网站</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>aidenz2019@outlook.com (aidenz)</managingEditor>
+            <webMaster>aidenz2019@outlook.com (aidenz)</webMaster><lastBuildDate>Fri, 10 Oct 2025 09:34:27 &#43;0800</lastBuildDate>
             <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>Test</title>
     <link>//localhost:1313/posts/test/</link>
     <pubDate>Fri, 10 Oct 2025 09:34:27 &#43;0800</pubDate>
-    <author>xxxx</author>
+    <author>aidenz2019@outlook.com (aidenz)</author>
     <guid>//localhost:1313/posts/test/</guid>
-    <description><![CDATA[]]></description>
+    <description><![CDATA[<p></p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-python">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">()</span></span></span></code></pre></div></div>]]></description>
 </item>
 <item>
     <title></title>
     <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/listsetqueue%E5%92%8Cmap/</link>
     <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>xxxx</author>
+    <author>aidenz2019@outlook.com (aidenz)</author>
     <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/listsetqueue%E5%92%8Cmap/</guid>
     <description><![CDATA[<h1 id="listsetqueue和map">List、Set、Queue和Map</h1>
 <p></p>
@@ -40,7 +47,7 @@
     <title></title>
     <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/final-%E5%85%B3%E9%94%AE%E5%AD%97/</link>
     <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>xxxx</author>
+    <author>aidenz2019@outlook.com (aidenz)</author>
     <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/final-%E5%85%B3%E9%94%AE%E5%AD%97/</guid>
     <description><![CDATA[<h3 id="final-关键字">final 关键字</h3>
 <h4 id="final-变量">final 变量</h4>
@@ -51,7 +58,7 @@ final 修饰的成员变量必须有一个默认值，否则编译器将会提�
     <title></title>
     <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-instanceof/</link>
     <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>xxxx</author>
+    <author>aidenz2019@outlook.com (aidenz)</author>
     <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-instanceof/</guid>
     <description><![CDATA[<h3 id="java-instanceof">Java instanceof</h3>
 <p>用意也非常简单，判断对象是否符合指定的类型，结果要么是 true，要么是 false。</p>
@@ -66,7 +73,7 @@ final 修饰的成员变量必须有一个默认值，否则编译器将会提�
     <title></title>
     <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-this%E5%92%8Csuper%E5%85%B3%E9%94%AE%E5%AD%97/</link>
     <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>xxxx</author>
+    <author>aidenz2019@outlook.com (aidenz)</author>
     <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-this%E5%92%8Csuper%E5%85%B3%E9%94%AE%E5%AD%97/</guid>
     <description><![CDATA[<h3 id="javathis和super关键字">Javathis和super关键字</h3>
 <h4 id="this">this</h4>
@@ -88,7 +95,7 @@ final 修饰的成员变量必须有一个默认值，否则编译器将会提�
     <title></title>
     <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E4%BB%A3%E7%A0%81%E5%88%9D%E5%A7%8B%E5%8C%96%E5%9D%97/</link>
     <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>xxxx</author>
+    <author>aidenz2019@outlook.com (aidenz)</author>
     <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E4%BB%A3%E7%A0%81%E5%88%9D%E5%A7%8B%E5%8C%96%E5%9D%97/</guid>
     <description><![CDATA[<h3 id="java-代码初始化块">Java 代码初始化块</h3>
 <p>![[Pasted image 20250820164453.png]]</p>]]></description>
@@ -97,7 +104,7 @@ final 修饰的成员变量必须有一个默认值，否则编译器将会提�
     <title></title>
     <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E5%86%85%E9%83%A8%E7%B1%BB/</link>
     <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>xxxx</author>
+    <author>aidenz2019@outlook.com (aidenz)</author>
     <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E5%86%85%E9%83%A8%E7%B1%BB/</guid>
     <description><![CDATA[<h3 id="java内部类">Java内部类</h3>
 <h4 id="成员内部类">成员内部类</h4>
@@ -120,7 +127,7 @@ final 修饰的成员变量必须有一个默认值，否则编译器将会提�
     <title></title>
     <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E6%8A%BD%E8%B1%A1%E7%B1%BB/</link>
     <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>xxxx</author>
+    <author>aidenz2019@outlook.com (aidenz)</author>
     <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E6%8A%BD%E8%B1%A1%E7%B1%BB/</guid>
     <description><![CDATA[<h3 id="java-抽象类">Java 抽象类</h3>
 <h4 id="定义抽象类">定义抽象类</h4>
@@ -140,7 +147,7 @@ final 修饰的成员变量必须有一个默认值，否则编译器将会提�
     <title></title>
     <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E6%8E%A5%E5%8F%A3/</link>
     <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>xxxx</author>
+    <author>aidenz2019@outlook.com (aidenz)</author>
     <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E6%8E%A5%E5%8F%A3/</guid>
     <description><![CDATA[<h3 id="java接口">Java接口</h3>
 <p>接口通过 interface 关键字来定义，它可以包含一些常量和方法，来看下面这个示例。</p>
@@ -178,7 +185,7 @@ final 修饰的成员变量必须有一个默认值，否则编译器将会提�
     <title></title>
     <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E6%9E%9A%E4%B8%BE/</link>
     <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>xxxx</author>
+    <author>aidenz2019@outlook.com (aidenz)</author>
     <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E6%9E%9A%E4%B8%BE/</guid>
     <description><![CDATA[<h3 id="java-枚举">Java 枚举</h3>
 <p>枚举（enum），是 Java 1.5 时引入的关键字，它表示一种特殊类型的类，继承自 java.lang.Enum。

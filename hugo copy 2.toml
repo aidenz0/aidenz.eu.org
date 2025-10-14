@@ -1,0 +1,151 @@
+# 更改使用 Hugo 构建网站时使用的默认主题
+
+theme = "LoveIt"
+
+
+
+# 网站标题
+
+title = "我的全新 Hugo 网站"
+
+
+
+# 网站语言, 仅在这里 CN 大写 ["en", "zh-CN", "fr", "pl", ...]
+
+languageCode = "zh-CN"
+
+# 语言名称 ["English", "简体中文", "Français", "Polski", ...]
+
+languageName = "简体中文"
+
+# 是否包括中日韩文字
+
+hasCJKLanguage = true
+
+# copyright description used only for seo schema
+# 版权描述，仅仅用于 SEO
+copyright = ""
+
+# whether to use robots.txt
+# 是否使用 robots.txt
+enableRobotsTXT = true
+# whether to use git commit log
+# 是否使用 git 信息
+enableGitInfo = true
+# whether to use emoji code
+# 是否使用 emoji 代码
+enableEmoji = true
+
+# ignore some build errors
+# 忽略一些构建错误
+ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
+
+# Pagination config
+# 分页配置
+[pagination]
+  disableAliases = false
+  pagerSize = 10
+  path = "page"
+
+# Menu config
+
+# 菜单配置
+
+[menu]
+
+  [[menu.main]]
+
+    weight = 1
+    identifier = "posts"
+    # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+    pre = ""
+    # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+    post = ""
+    name = "文章"
+    url = "/posts/"
+    # 当你将鼠标悬停在此菜单链接上时, 将显示的标题
+    title = ""
+
+  [[menu.main]]
+    weight = 2
+    identifier = "tags"
+    pre = ""
+    post = ""
+    name = "标签"
+    url = "/tags/"
+    title = ""
+
+  [[menu.main]]
+
+    weight = 3
+    identifier = "categories"
+    pre = ""
+    post = ""
+    name = "分类"
+    url = "/categories/"
+    title = ""
+
+[params]
+  # site default theme ["auto", "light", "dark"]
+  # 网站默认主题 ["auto", "light", "dark"]
+  defaultTheme = "auto"
+  # date format
+  # 日期格式
+  dateFormat = "2006-01-02"
+  # website title for Open Graph and Twitter Cards
+  # 网站标题, 用于 Open Graph 和 Twitter Cards
+  title = "aidenz"
+  # website description for RSS, SEO, Open Graph and Twitter Cards
+  # 网站描述, 用于 RSS, SEO, Open Graph 和 Twitter Cards
+  description = "aidenz的个人网站"
+  # 网站图片, 用于 Open Graph 和 Twitter Cards
+  images = []
+  # Author config
+  # 作者配置
+  [params.author]
+    name = "aidenz"
+    email = "aidenz2019@outlook.com"
+    link = "https://github.com/aidenz0"
+
+  # Header config
+  # 页面头部导航栏配置
+  [params.header]
+    # desktop header mode ["fixed", "normal", "auto"]
+    # 桌面端导航栏模式 ["fixed", "normal", "auto"]
+    desktopMode = "fixed"
+    # mobile header mode ["fixed", "normal", "auto"]
+    # 移动端导航栏模式 ["fixed", "normal", "auto"]
+    mobileMode = "auto"
+    # Header title config
+    # 页面头部导航栏标题配置
+    [params.header.title]
+      # URL of the LOGO
+      # LOGO 的 URL
+      logo = ""
+      # title name
+      # 标题名称
+      name = "My cool site"
+      # you can add extra information before the name (HTML format is supported), such as icons
+      # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+      pre = ""
+      # you can add extra information after the name (HTML format is supported), such as icons
+      # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+      post = ""
+      # whether to use typeit animation for title name
+      # 是否为标题显示打字机动画
+      typeit = false
+
+
+
+
+# Hugo 解析文档的配置
+
+[markup]
+
+  # 语法高亮设置 (https://gohugo.io/content-management/syntax-highlighting)
+
+  [markup.highlight]
+
+    # false 是必要的设置 (https://github.com/dillonzq/LoveIt/issues/158)
+
+    noClasses = false
