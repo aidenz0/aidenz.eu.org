@@ -11,10 +11,14 @@
             "id": "43c6d4d6b713fb1a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "content/posts/test.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新标签页"
+              "title": "test"
             }
           }
         ]
@@ -159,7 +163,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -175,6 +179,7 @@
   },
   "active": "43c6d4d6b713fb1a",
   "lastOpenFiles": [
+    "git test.md",
     "content/posts/test.md",
     "public/page/4/index.html",
     "public/page/4",
@@ -207,7 +212,6 @@
     "content/posts/Java基础/面向对象编程/Java 代码初始化块.md",
     "content/posts/Java基础/面向对象编程/Java instanceof.md",
     "content/posts/Java基础/集合框架/List、Set、Queue和Map.md",
-    "public/lib/simple-icons/icons/line.min.svg",
-    "git test.md"
+    "public/lib/simple-icons/icons/line.min.svg"
   ]
 }
