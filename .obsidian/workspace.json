@@ -13,15 +13,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "git test.md",
+                "file": "content/posts/Java基础/JavaIO/2. 文件流.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "git test"
+              "title": "2. 文件流"
             }
           }
-        ]
+        ],
+        "stacked": true
       }
     ],
     "direction": "vertical"
@@ -78,7 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "6e2d9a374ffa5f84",
@@ -140,12 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "content/posts/Java基础/JavaIO/2. 文件流.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "大纲"
+              "title": "2. 文件流 的大纲"
             }
           },
           {
@@ -159,7 +161,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -179,6 +181,18 @@
   },
   "active": "43c6d4d6b713fb1a",
   "lastOpenFiles": [
+    "content/posts/Java基础/JavaIO/1. IO 知识体系.md",
+    "content/posts/Java基础/JavaIO/2. 文件流.md",
+    "未命名 2.base",
+    "未命名 1.base",
+    "未命名.base",
+    "未命名.md",
+    "template/post template.md",
+    "content/posts/Java基础/集合框架/Iterator和Iterable有什么区别.md",
+    "content/posts/Java基础/集合框架/List、Set、Queue和Map.md",
+    "template",
+    "content/posts/Java基础/JavaIO",
+    "git test.md",
     "public/lib/lunr/lunr.min.js",
     "public/lib/lunr",
     "content/posts/test.md",
@@ -203,19 +217,6 @@
     "content/posts/Java基础/集合框架/asset/images/Pasted image 20250916095137.png",
     "content/posts/Java基础/集合框架/asset/images",
     "content/posts/Java基础/集合框架/asset",
-    "content/posts/Java基础/集合框架/List、Set、Queue和Map.md",
-    "content/posts/Java基础/集合框架",
-    "content/posts/Java基础",
-    "content/posts",
-    "public/fr/tags/index.xml",
-    "public/fr/tags/index.html",
-    "public/fr/categories/index.xml",
-    "public/en/theme-documentation-extended-shortcodes/index.md",
-    "public/en/theme-documentation-content/index.md",
-    "public/en/about/index.md",
-    "public/en/theme-documentation-basics/index.md",
-    "public/en/basic-markdown-syntax/index.md",
-    "public/en/theme-documentation-mermaid-shortcode/index.md",
     "public/theme-documentation-content/summary.zh-cn.png",
     "public/theme-documentation-basics/complete-configuration-preview.zh-cn.png",
     "public/theme-documentation-basics/basic-configuration-preview.zh-cn.png",
