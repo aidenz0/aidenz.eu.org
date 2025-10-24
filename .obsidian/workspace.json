@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/posts/Java基础/JavaIO/2. 文件流.md",
+                "file": "content/posts/dify/dify修改嵌入聊天框的power by图标.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2. 文件流"
+              "title": "dify修改嵌入聊天框的power by图标"
             }
           }
         ],
@@ -141,13 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/posts/Java基础/JavaIO/2. 文件流.md",
+                "file": "content/posts/dify/dify修改嵌入聊天框的power by图标.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "2. 文件流 的大纲"
+              "title": "dify修改嵌入聊天框的power by图标 的大纲"
             }
           },
           {
@@ -181,8 +181,14 @@
   },
   "active": "43c6d4d6b713fb1a",
   "lastOpenFiles": [
-    "content/posts/Java基础/JavaIO/1. IO 知识体系.md",
+    "content/posts/git/git常用命令.md",
+    "content/posts/dify/dify修改嵌入聊天框的power by图标.md",
+    "content/posts/dify",
+    "content/posts/test.md",
+    "content/posts/git",
+    "content/posts/Java基础/JavaIO/字节流.md",
     "content/posts/Java基础/JavaIO/2. 文件流.md",
+    "content/posts/Java基础/JavaIO/1. IO 知识体系.md",
     "未命名 2.base",
     "未命名 1.base",
     "未命名.base",
@@ -195,7 +201,6 @@
     "git test.md",
     "public/lib/lunr/lunr.min.js",
     "public/lib/lunr",
-    "content/posts/test.md",
     "content/posts/Java基础/面向对象编程/多态、继承和封装.md",
     "content/posts/Java基础/面向对象编程/不可变对象.md",
     "content/posts/Java基础/面向对象编程/static 关键字.md",
@@ -211,12 +216,8 @@
     "content/posts/Java基础/面向对象编程/Java 抽象类.md",
     "content/posts/Java基础/面向对象编程/Java 内部类.md",
     "content/posts/Java基础/面向对象编程/Java 代码初始化块.md",
-    "content/posts/Java基础/面向对象编程/Java this和super关键字.md",
-    "content/posts/Java基础/面向对象编程/Java instanceof.md",
     "content/posts/Java基础/面向对象编程",
     "content/posts/Java基础/集合框架/asset/images/Pasted image 20250916095137.png",
-    "content/posts/Java基础/集合框架/asset/images",
-    "content/posts/Java基础/集合框架/asset",
     "public/theme-documentation-content/summary.zh-cn.png",
     "public/theme-documentation-basics/complete-configuration-preview.zh-cn.png",
     "public/theme-documentation-basics/basic-configuration-preview.zh-cn.png",
