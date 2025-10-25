@@ -1,4 +1,12 @@
++++
+date = '2025-10-25'
+draft = true
+title = 'dify修改嵌入聊天框的power by图标'
++++
 # 背景
+
+
+
 最近近期公司需要使用dify框架开发一个公司网站的AI客服助手，但是嵌入网站时会显示powered by dify。有dify的logo。
 # 版本
 dify版本：1.9.1
