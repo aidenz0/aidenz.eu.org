@@ -4,7 +4,55 @@
         <link>//localhost:1313/posts/</link>
         <description>All Posts | 我的全新 Hugo 网站</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>aidenz2019@outlook.com (aidenz)</managingEditor>
-            <webMaster>aidenz2019@outlook.com (aidenz)</webMaster><lastBuildDate>Fri, 10 Oct 2025 09:34:27 &#43;0800</lastBuildDate><atom:link href="//localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>aidenz2019@outlook.com (aidenz)</webMaster><lastBuildDate>Fri, 17 Oct 2025 00:00:00 &#43;0000</lastBuildDate><atom:link href="//localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
+    <title></title>
+    <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/javaio/2.-%E6%96%87%E4%BB%B6%E6%B5%81/</link>
+    <pubDate>Fri, 17 Oct 2025 00:00:00 &#43;0000</pubDate>
+    <author>aidenz2019@outlook.com (aidenz)</author>
+    <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/javaio/2.-%E6%96%87%E4%BB%B6%E6%B5%81/</guid>
+    <description><![CDATA[<p><code>java.io.File</code> 类是专门对文件进行操作的类，注意只能对文件本身进行操作，不能对文件内容进行操作，想要操作内容，必须借助输入输出流。</p>
+<p><code>File</code> 类是文件和文件夹的抽象表示，主要用于文件和文件夹的创建、查找和删除等操作。</p>]]></description>
+</item>
+<item>
+    <title>Iterator和Iterable有什么区别</title>
+    <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/iterator%E5%92%8Citerable%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</link>
+    <pubDate>Thu, 16 Oct 2025 14:52:00 &#43;0800</pubDate>
+    <author>aidenz2019@outlook.com (aidenz)</author>
+    <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/iterator%E5%92%8Citerable%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/</guid>
+    <description><![CDATA[<p>Iterator 是个接口，JDK 1.2 的时候就有了，用来改进 Enumeration 接口：</p>
+<ul>
+<li>允许删除元素（增加了 remove 方法）</li>
+<li>优化了方法名（Enumeration 中是 hasMoreElements 和 nextElement，不简洁）
+ Iterator 的源码：
+ <code>java  public interface Iterator&lt;E&gt; { // 判断集合中是否存在下一个对象 boolean hasNext(); // 返回集合中的下一个对象，并将访问指针移动一位 E next(); // 删除集合中调用next()方法返回的对象 default void remove() { throw new UnsupportedOperationException(&quot;remove&quot;); } }  </code>
+JDK 1.8 时，Iterable 接口中新增了 forEach 方法。该方法接受一个 Consumer 对象作为参数，用于对集合中的每个元素执行指定的操作。该方法的实现方式是使用 for-each 循环遍历集合中的元素，对于每个元素，调用 Consumer 对象的 accept 方法执行指定的操作。</li>
+</ul>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">default</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">forEach</span><span class="p">(</span><span class="n">Consumer</span><span class="o">&lt;?</span><span class="w"> </span><span class="kd">super</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">action</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">Objects</span><span class="p">.</span><span class="na">requireNonNull</span><span class="p">(</span><span class="n">action</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="k">this</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">action</span><span class="p">.</span><span class="na">accept</span><span class="p">(</span><span class="n">t</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div></div>
+<p>该方法实现时首先会对 action 参数进行非空检查，如果为 null 则抛出 NullPointerException 异常。然后使用 for-each 循环遍历集合中的元素，并对每个元素调用 action.accept(t) 方法执行指定的操作。由于 Iterable 接口是 Java 集合框架中所有集合类型的基本接口，因此该方法可以被所有实现了 Iterable 接口的集合类型使用。
+它对 Iterable 的每个元素执行给定操作，具体指定的操作需要自己写Consumer接口通过accept方法回调出来。</p>]]></description>
+</item>
+<item>
+    <title>IO 知识体系</title>
+    <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/javaio/1.-io-%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/</link>
+    <pubDate>Thu, 16 Oct 2025 00:00:00 &#43;0000</pubDate>
+    <author>aidenz2019@outlook.com (aidenz)</author>
+    <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/javaio/1.-io-%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/</guid>
+    <description><![CDATA[<p></p>
+<h2 id="初识io">初识IO</h2>
+<p>IO，即in和out，也就是输入和输出，指应用程序和外部设备之间的数据传递，常见的外部设备包括文件、管道、网络连接。</p>
+<p>Java 中是通过流处理IO 的，那么什么是流？</p>]]></description>
+</item>
+<item>
     <title>Test</title>
     <link>//localhost:1313/posts/test/</link>
     <pubDate>Fri, 10 Oct 2025 09:34:27 &#43;0800</pubDate>
@@ -17,6 +65,54 @@
         <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
         <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
     </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">()</span></span></span></code></pre></div></div>]]></description>
+</item>
+<item>
+    <title></title>
+    <link>//localhost:1313/posts/dify/dify%E4%BF%AE%E6%94%B9%E5%B5%8C%E5%85%A5%E8%81%8A%E5%A4%A9%E6%A1%86%E7%9A%84power-by%E5%9B%BE%E6%A0%87/</link>
+    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+    <author>aidenz2019@outlook.com (aidenz)</author>
+    <guid>//localhost:1313/posts/dify/dify%E4%BF%AE%E6%94%B9%E5%B5%8C%E5%85%A5%E8%81%8A%E5%A4%A9%E6%A1%86%E7%9A%84power-by%E5%9B%BE%E6%A0%87/</guid>
+    <description><![CDATA[<h1 id="背景">背景</h1>
+<p>最近近期公司需要使用dify框架开发一个公司网站的AI客服助手，但是嵌入网站时会显示powered by dify。有dify的logo。</p>
+<h1 id="版本">版本</h1>
+<p>dify版本：1.9.1
+docker部署</p>]]></description>
+</item>
+<item>
+    <title></title>
+    <link>//localhost:1313/posts/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+    <author>aidenz2019@outlook.com (aidenz)</author>
+    <guid>//localhost:1313/posts/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+    <description><![CDATA[<h1 id="git-设置用户名和邮箱">git 设置用户名和邮箱</h1>
+<p>全局配置用户名和邮箱</p>
+<p>全局配置适用于所有仓库：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-shell">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git config --global user.name <span class="s2">&#34;你的用户名&#34;</span>
+</span></span><span class="line"><span class="cl">git config --global user.email <span class="s2">&#34;你的邮箱@example.com&#34;</span></span></span></code></pre></div></div>
+<p><strong>验证配置是否成功：</strong></p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-shell">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git config --global user.name
+</span></span><span class="line"><span class="cl">git config --global user.email</span></span></code></pre></div></div>]]></description>
+</item>
+<item>
+    <title></title>
+    <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/javaio/%E5%AD%97%E8%8A%82%E6%B5%81/</link>
+    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
+    <author>aidenz2019@outlook.com (aidenz)</author>
+    <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/javaio/%E5%AD%97%E8%8A%82%E6%B5%81/</guid>
+    <description><![CDATA[<h1 id="字节输出流">字节输出流</h1>
+<p><code>java.io.OutputStream</code> 是<strong>字节输出流</strong>的<strong>超类</strong>（父类），我们来看一下它定义的一些共性方法：</p>
+<p>1、 <code>close()</code> ：关闭此输出流并释放与此流相关联的系统资源。</p>
+<p>2、 <code>flush()</code> ：刷新此输出流并强制缓冲区的字节被写入到目的地。</p>]]></description>
 </item>
 <item>
     <title></title>
@@ -66,139 +162,6 @@ final 修饰的成员变量必须有一个默认值，否则编译器将会提�
         <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
         <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
     </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="p">)</span></span></span></code></pre></div></div>]]></description>
-</item>
-<item>
-    <title></title>
-    <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-this%E5%92%8Csuper%E5%85%B3%E9%94%AE%E5%AD%97/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>aidenz2019@outlook.com (aidenz)</author>
-    <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-this%E5%92%8Csuper%E5%85%B3%E9%94%AE%E5%AD%97/</guid>
-    <description><![CDATA[<h3 id="javathis和super关键字">Javathis和super关键字</h3>
-<h4 id="this">this</h4>
-<ul>
-<li>调用当前类的方法；</li>
-<li><code>this()</code>  可以调用当前类的构造方法；</li>
-<li>this 可以作为参数在方法中传递；</li>
-<li>this 可以作为参数在构造方法中传递；</li>
-<li>this 可以作为方法的返回值，返回当前类的对象</li>
-</ul>
-<h4 id="super">super</h4>
-<ul>
-<li>指向父类对象；</li>
-<li>调用父类的方法；</li>
-<li><code>super()</code>  可以调用父类的构造方法。</li>
-</ul>]]></description>
-</item>
-<item>
-    <title></title>
-    <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E4%BB%A3%E7%A0%81%E5%88%9D%E5%A7%8B%E5%8C%96%E5%9D%97/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>aidenz2019@outlook.com (aidenz)</author>
-    <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E4%BB%A3%E7%A0%81%E5%88%9D%E5%A7%8B%E5%8C%96%E5%9D%97/</guid>
-    <description><![CDATA[<h3 id="java-代码初始化块">Java 代码初始化块</h3>
-<p>![[Pasted image 20250820164453.png]]</p>]]></description>
-</item>
-<item>
-    <title></title>
-    <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E5%86%85%E9%83%A8%E7%B1%BB/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>aidenz2019@outlook.com (aidenz)</author>
-    <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E5%86%85%E9%83%A8%E7%B1%BB/</guid>
-    <description><![CDATA[<h3 id="java内部类">Java内部类</h3>
-<h4 id="成员内部类">成员内部类</h4>
-<p>成员内部类是最常见的内部类</p>
-<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
-    <div class="code-header language-java">
-        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
-        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
-        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="w"> </span><span class="kd">class</span> <span class="nc">Wanger</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">18</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">class</span> <span class="nc">Wangxiaoer</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">81</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div></div>
-<p>看起来内部类 Wangxiaoer 就好像 Wanger 的一个成员，成员内部类可以无限制访问外部类的所有成员属性。</p>]]></description>
-</item>
-<item>
-    <title></title>
-    <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E6%8A%BD%E8%B1%A1%E7%B1%BB/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>aidenz2019@outlook.com (aidenz)</author>
-    <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E6%8A%BD%E8%B1%A1%E7%B1%BB/</guid>
-    <description><![CDATA[<h3 id="java-抽象类">Java 抽象类</h3>
-<h4 id="定义抽象类">定义抽象类</h4>
-<p>定义抽象类的时候需要用到关键字  <code>abstract</code>，放在  <code>class</code>  关键字前，就像下面这样。</p>
-<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
-    <div class="code-header language-java">
-        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
-        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
-        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AbstractPlayer</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div></div>
-<h4 id="抽象类的特征">抽象类的特征</h4>
-<p>抽象类是不能实例化的，尝试通过  <code>new</code>  关键字实例化的话，编译器会报错，提示“类是抽象的，不能实例化”。
-虽然抽象类不能实例化，但可以有子类。子类通过  <code>extends</code>  关键字来继承抽象类。就像下面这样。</p>]]></description>
-</item>
-<item>
-    <title></title>
-    <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E6%8E%A5%E5%8F%A3/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>aidenz2019@outlook.com (aidenz)</author>
-    <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E6%8E%A5%E5%8F%A3/</guid>
-    <description><![CDATA[<h3 id="java接口">Java接口</h3>
-<p>接口通过 interface 关键字来定义，它可以包含一些常量和方法，来看下面这个示例。</p>
-<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
-    <div class="code-header language-java">
-        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
-        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
-        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Electronic</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 常量</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">LED</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;LED&#34;</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 抽象方法</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">getElectricityUse</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 静态方法</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">isEnergyEfficient</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">electtronicType</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">electtronicType</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">LED</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 默认方法</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">default</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printDescription</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;电子&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div></div>
-<p><strong>接口中定义的变量会在编译的时候自动加上  <code>public static final</code>  修饰符</strong>
-<strong>没有使用  <code>private</code>、<code>default</code>  或者  <code>static</code>  关键字修饰的方法是隐式抽象的</strong>，在编译的时候会自动加上  <code>public abstract</code>  修饰符。
-<strong>从 Java 8 开始，接口中允许有静态方法</strong>，接口中定义静态方法的目的是为了提供一种简单的机制，使我们不必创建对象就能调用方法，从而提高接口的竞争力。
-<strong>接口中允许定义  <code>default</code>  方法</strong>
-允许在接口中定义默认方法的理由很充分，因为一个接口可能有多个实现类，这些类就必须实现接口中定义的抽象类，否则编译器就会报错。假如我们需要在所有的实现类中追加某个具体的方法，在没有  <code>default</code>  方法的帮助下，我们就必须挨个对实现类进行修改。
-<strong>接口不允许直接实例化</strong>，否则编译器会报错。
-需要定义一个类去实现接口，见下例。</p>]]></description>
-</item>
-<item>
-    <title></title>
-    <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E6%9E%9A%E4%B8%BE/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>aidenz2019@outlook.com (aidenz)</author>
-    <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E6%9E%9A%E4%B8%BE/</guid>
-    <description><![CDATA[<h3 id="java-枚举">Java 枚举</h3>
-<p>枚举（enum），是 Java 1.5 时引入的关键字，它表示一种特殊类型的类，继承自 java.lang.Enum。
-新建一个枚举。</p>
-<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
-    <div class="code-header language-java">
-        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
-        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
-        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">enum</span><span class="w"> </span><span class="n">PlayerType</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">TENNIS</span><span class="p">,</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">FOOTBALL</span><span class="p">,</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">BASKETBALL</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div></div>
-<p>其反编译后的字节码。</p>]]></description>
 </item>
 </channel>
 </rss>
