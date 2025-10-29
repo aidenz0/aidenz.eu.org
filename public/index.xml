@@ -4,17 +4,101 @@
         <link>//localhost:1313/</link>
         <description>aidenz的个人网站</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>aidenz2019@outlook.com (aidenz)</managingEditor>
-            <webMaster>aidenz2019@outlook.com (aidenz)</webMaster><lastBuildDate>Sat, 25 Oct 2025 00:00:00 &#43;0000</lastBuildDate>
+            <webMaster>aidenz2019@outlook.com (aidenz)</webMaster><lastBuildDate>Wed, 29 Oct 2025 00:00:00 &#43;0000</lastBuildDate>
             <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title></title>
+    <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/javaio/5.-%E7%BC%93%E5%86%B2%E6%B5%81/</link>
+    <pubDate>Wed, 29 Oct 2025 00:00:00 &#43;0000</pubDate>
+    <author>aidenz2019@outlook.com (aidenz)</author>
+    <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/javaio/5.-%E7%BC%93%E5%86%B2%E6%B5%81/</guid>
+    <description><![CDATA[<p>Java 的缓冲流是对字节流和字符流的一种封装，通过在内存中开辟缓冲区来提高 I/O 操作的效率。Java 通过 BufferedInputStream 和 BufferedOutputStream 来实现字节流的缓冲，通过 BufferedReader 和 BufferedWriter 来实现字符流的缓冲。</p>]]></description>
+</item>
+<item>
+    <title>Scanner工具类</title>
+    <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%B1%BB/1.-scanner%E5%B7%A5%E5%85%B7%E7%B1%BB/</link>
+    <pubDate>Wed, 29 Oct 2025 00:00:00 &#43;0000</pubDate>
+    <author>aidenz2019@outlook.com (aidenz)</author>
+    <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E7%B1%BB/1.-scanner%E5%B7%A5%E5%85%B7%E7%B1%BB/</guid>
+    <description><![CDATA[<h2 id="扫描控制台输入">扫描控制台输入</h2>
+<p>使用 Scanner 类来扫描控制台输入</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w"> </span><span class="c1">// 创建 Scanner 对象，从标准输入流中读取数据</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&#34;请输入一个整数：&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w"> </span><span class="c1">// 获取用户输入的整数</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;您输入的整数是：&#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">num</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w"> </span><span class="c1">// 读取换行符，避免影响下一次读取</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&#34;请输入一个字符串：&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w"> </span><span class="c1">// 获取用户输入的字符串</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;您输入的字符串是：&#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">str</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">scanner</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="n">关闭</span><span class="w"> </span><span class="n">Scanner</span><span class="w"> </span><span class="n">对象</span></span></span></code></pre></div></div>
+<h3 id="1-nextline">1. nextLine()</h3>
+<p><code>nextLine()</code> 方法会扫描输入流中的字符，直到遇到行末尾的换行符 <code>\n</code>，然后将该行的内容作为字符串返回，同时，<code>nextLine()</code> 会将 Scanner 对象的位置移动到下一行的开头，以便下一次读取数据时从下一行的开头开始读取。</p>]]></description>
+</item>
+<item>
+    <title>try-with-resources</title>
+    <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/2.-try-with-resources/</link>
+    <pubDate>Wed, 29 Oct 2025 00:00:00 &#43;0000</pubDate>
+    <author>aidenz2019@outlook.com (aidenz)</author>
+    <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/2.-try-with-resources/</guid>
+    <description><![CDATA[<p>在处理必须关闭的资源时，始终有限考虑使用 try-with-resources，而不是 try–catch-finally。前者产生的代码更加简洁、清晰，产生的异常信息也更靠谱。</p>]]></description>
+</item>
+<item>
+    <title>序列流</title>
+    <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/javaio/7.-%E5%BA%8F%E5%88%97%E6%B5%81/</link>
+    <pubDate>Wed, 29 Oct 2025 00:00:00 &#43;0000</pubDate>
+    <author>aidenz2019@outlook.com (aidenz)</author>
+    <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/javaio/7.-%E5%BA%8F%E5%88%97%E6%B5%81/</guid>
+    <description><![CDATA[<p>Java 的序列流（ObjectInputStream 和 ObjectOutputStream）是一种可以将 Java 对象序列化和反序列化的流。</p>
+<p>序列化是指将一个对象转换为一个字节序列（包含<code>对象的数据</code>、<code>对象的类型</code>和<code>对象中存储的属性</code>等信息），以便在网络上传输或保存到文件中，或者在程序之间传递。在 Java 中，序列化通过实现 java.io.Serializable 接口来实现，只有实现了Serializable 接口的对象才能被序列化。</p>]]></description>
+</item>
+<item>
+    <title>异常处理解析</title>
+    <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/1.-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E8%A7%A3%E6%9E%90/</link>
+    <pubDate>Wed, 29 Oct 2025 00:00:00 &#43;0000</pubDate>
+    <author>aidenz2019@outlook.com (aidenz)</author>
+    <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/1.-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E8%A7%A3%E6%9E%90/</guid>
+    <description><![CDATA[<p>“异常是指中断程序正常执行的一个不确定的事件。当异常发生时，程序的正常执行流程就会被打断。一般情况下，程序都会有很多条语句，如果没有异常处理机制，前面的语句一旦出现了异常，后面的语句就没办法继续执行了。”</p>]]></description>
+</item>
+<item>
+    <title>转换流</title>
+    <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/javaio/6.-%E8%BD%AC%E6%8D%A2%E6%B5%81/</link>
+    <pubDate>Wed, 29 Oct 2025 00:00:00 &#43;0000</pubDate>
+    <author>aidenz2019@outlook.com (aidenz)</author>
+    <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/javaio/6.-%E8%BD%AC%E6%8D%A2%E6%B5%81/</guid>
+    <description><![CDATA[<p>转换流可以将一个字节流包装成字符流，或者将一个字符流包装成字节流。这种转换通常用于处理文本数据，如读取文本文件或将数据从网络传输到应用程序。
+转换流主要有两种类型：InputStreamReader 和 OutputStreamWriter。</p>]]></description>
+</item>
+<item>
+    <title>字符流</title>
+    <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/javaio/4.-%E5%AD%97%E7%AC%A6%E6%B5%81/</link>
+    <pubDate>Sun, 26 Oct 2025 00:00:00 &#43;0000</pubDate>
+    <author>aidenz2019@outlook.com (aidenz)</author>
+    <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/javaio/4.-%E5%AD%97%E7%AC%A6%E6%B5%81/</guid>
+    <description><![CDATA[<h1 id="字符流">字符流</h1>
+<p><strong>字符流 = 字节流 + 编码表</strong></p>
+<h2 id="字符输入流">字符输入流</h2>
+<p><code>java.io.Reader</code>是<strong>字符输入流</strong>的<strong>超类</strong>（父类），它定义了字符输入流的一些共性方法：</p>
+<ul>
+<li>1、<code>close()</code>：关闭此流并释放与此流相关的系统资源。</li>
+<li>2、<code>read()</code>：从输入流读取一个字符。</li>
+<li>3、<code>read(char[] cbuf)</code>：从输入流中读取一些字符，并将它们存储到字符数组 <code>cbuf</code>中</li>
+</ul>
+<p>FileReader 是 Reader 的子类，用于从文件中读取字符数据。它的主要特点如下：</p>]]></description>
+</item>
+<item>
     <title>dify修改嵌入聊天框的power by图标</title>
     <link>//localhost:1313/posts/dify/dify%E4%BF%AE%E6%94%B9%E5%B5%8C%E5%85%A5%E8%81%8A%E5%A4%A9%E6%A1%86%E7%9A%84power-by%E5%9B%BE%E6%A0%87/</link>
     <pubDate>Sat, 25 Oct 2025 00:00:00 &#43;0000</pubDate>
     <author>aidenz2019@outlook.com (aidenz)</author>
     <guid>//localhost:1313/posts/dify/dify%E4%BF%AE%E6%94%B9%E5%B5%8C%E5%85%A5%E8%81%8A%E5%A4%A9%E6%A1%86%E7%9A%84power-by%E5%9B%BE%E6%A0%87/</guid>
-    <description><![CDATA[<h1 id="背景">背景</h1>
+    <description><![CDATA[<h2 id="背景">背景</h2>
 <p>最近近期公司需要使用dify框架开发一个公司网站的AI客服助手，但是嵌入网站时会显示powered by dify。有dify的logo。</p>
-<h1 id="版本">版本</h1>
+<h2 id="版本">版本</h2>
 <p>dify版本：1.9.1
 docker部署</p>]]></description>
 </item>
@@ -54,116 +138,6 @@ JDK 1.8 时，Iterable 接口中新增了 forEach 方法。该方法接受一个
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div></div>
 <p>该方法实现时首先会对 action 参数进行非空检查，如果为 null 则抛出 NullPointerException 异常。然后使用 for-each 循环遍历集合中的元素，并对每个元素调用 action.accept(t) 方法执行指定的操作。由于 Iterable 接口是 Java 集合框架中所有集合类型的基本接口，因此该方法可以被所有实现了 Iterable 接口的集合类型使用。
 它对 Iterable 的每个元素执行给定操作，具体指定的操作需要自己写Consumer接口通过accept方法回调出来。</p>]]></description>
-</item>
-<item>
-    <title>IO 知识体系</title>
-    <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/javaio/1.-io-%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/</link>
-    <pubDate>Thu, 16 Oct 2025 00:00:00 &#43;0000</pubDate>
-    <author>aidenz2019@outlook.com (aidenz)</author>
-    <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/javaio/1.-io-%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/</guid>
-    <description><![CDATA[<p></p>
-<h2 id="初识io">初识IO</h2>
-<p>IO，即in和out，也就是输入和输出，指应用程序和外部设备之间的数据传递，常见的外部设备包括文件、管道、网络连接。</p>
-<p>Java 中是通过流处理IO 的，那么什么是流？</p>]]></description>
-</item>
-<item>
-    <title>Test</title>
-    <link>//localhost:1313/posts/test/</link>
-    <pubDate>Fri, 10 Oct 2025 09:34:27 &#43;0800</pubDate>
-    <author>aidenz2019@outlook.com (aidenz)</author>
-    <guid>//localhost:1313/posts/test/</guid>
-    <description><![CDATA[<p></p>
-<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
-    <div class="code-header language-python">
-        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
-        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
-        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">()</span></span></span></code></pre></div></div>]]></description>
-</item>
-<item>
-    <title></title>
-    <link>//localhost:1313/posts/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>aidenz2019@outlook.com (aidenz)</author>
-    <guid>//localhost:1313/posts/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
-    <description><![CDATA[<h1 id="git-设置用户名和邮箱">git 设置用户名和邮箱</h1>
-<p>全局配置用户名和邮箱</p>
-<p>全局配置适用于所有仓库：</p>
-<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
-    <div class="code-header language-shell">
-        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
-        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
-        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git config --global user.name <span class="s2">&#34;你的用户名&#34;</span>
-</span></span><span class="line"><span class="cl">git config --global user.email <span class="s2">&#34;你的邮箱@example.com&#34;</span></span></span></code></pre></div></div>
-<p><strong>验证配置是否成功：</strong></p>
-<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
-    <div class="code-header language-shell">
-        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
-        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
-        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git config --global user.name
-</span></span><span class="line"><span class="cl">git config --global user.email</span></span></code></pre></div></div>]]></description>
-</item>
-<item>
-    <title></title>
-    <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/javaio/%E5%AD%97%E8%8A%82%E6%B5%81/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>aidenz2019@outlook.com (aidenz)</author>
-    <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/javaio/%E5%AD%97%E8%8A%82%E6%B5%81/</guid>
-    <description><![CDATA[<h1 id="字节输出流">字节输出流</h1>
-<p><code>java.io.OutputStream</code> 是<strong>字节输出流</strong>的<strong>超类</strong>（父类），我们来看一下它定义的一些共性方法：</p>
-<p>1、 <code>close()</code> ：关闭此输出流并释放与此流相关联的系统资源。</p>
-<p>2、 <code>flush()</code> ：刷新此输出流并强制缓冲区的字节被写入到目的地。</p>]]></description>
-</item>
-<item>
-    <title></title>
-    <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/listsetqueue%E5%92%8Cmap/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>aidenz2019@outlook.com (aidenz)</author>
-    <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/listsetqueue%E5%92%8Cmap/</guid>
-    <description><![CDATA[<h1 id="listsetqueue和map">List、Set、Queue和Map</h1>
-<p></p>
-<p>Java集合框架分类两条大的支线：</p>
-<ol>
-<li>Collection，主要由 List、Set、Queue 组成：</li>
-</ol>
-<ul>
-<li>List 代表有序、可重复的集合，典型代表就是封装了动态数组的 ArrayList和封装了链表的LinkedList；</li>
-<li>Set 代表无序、不可重复的集合，典型代表就是 HashSet 和 TreeSet；</li>
-<li>Queue 代表队列，典型代表就是双端队列 ArrayDeque，以及优先级队列PriorityQueue。</li>
-</ul>
-<ol start="2">
-<li>Map，代表键值对的集合，典型代表就是HashMap。</li>
-</ol>
-<h2 id="1-list">1. list</h2>
-<p>List 的特点是存取有序，可以存放重复的元素，可以用下标对元素进行操作。</p>]]></description>
-</item>
-<item>
-    <title></title>
-    <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/final-%E5%85%B3%E9%94%AE%E5%AD%97/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>aidenz2019@outlook.com (aidenz)</author>
-    <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/final-%E5%85%B3%E9%94%AE%E5%AD%97/</guid>
-    <description><![CDATA[<h3 id="final-关键字">final 关键字</h3>
-<h4 id="final-变量">final 变量</h4>
-<p>被 final 修饰的变量无法重新赋值。换句话说，final 变量一旦初始化，就无法更改。
-final 修饰的成员变量必须有一个默认值，否则编译器将会提醒没有初始化。</p>]]></description>
-</item>
-<item>
-    <title></title>
-    <link>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-instanceof/</link>
-    <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
-    <author>aidenz2019@outlook.com (aidenz)</author>
-    <guid>//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-instanceof/</guid>
-    <description><![CDATA[<h3 id="java-instanceof">Java instanceof</h3>
-<p>用意也非常简单，判断对象是否符合指定的类型，结果要么是 true，要么是 false。</p>
-<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
-    <div class="code-header language-java">
-        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
-        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
-        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="p">)</span></span></span></code></pre></div></div>]]></description>
 </item>
 </channel>
 </rss>

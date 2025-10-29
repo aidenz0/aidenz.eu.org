@@ -3,15 +3,15 @@ date = '2025-10-25'
 draft = true
 title = 'dify修改嵌入聊天框的power by图标'
 +++
-# 背景
+## 背景
 
 
 
 最近近期公司需要使用dify框架开发一个公司网站的AI客服助手，但是嵌入网站时会显示powered by dify。有dify的logo。
-# 版本
+## 版本
 dify版本：1.9.1
 docker部署
-# 解决方法
+## 解决方法
 1. 停止dify服务`docker compose down`
 2. 替换`/path/to/dify-main/web/public/logo/logo.svg`,替换为自己的logo文件
 3. 在`/path/to/dify-main/docker`文件夹下，新建`run_dify.sh`脚本，

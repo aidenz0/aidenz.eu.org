@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>转换流 - 我的全新 Hugo 网站</title><meta name="Description" content="aidenz的个人网站"><meta property="og:url" content="//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/javaio/6.-%E8%BD%AC%E6%8D%A2%E6%B5%81/">
+  <meta property="og:site_name" content="我的全新 Hugo 网站">
+  <meta property="og:title" content="转换流">
+  <meta property="og:description" content="转换流可以将一个字节流包装成字符流，或者将一个字符流包装成字节流。这种转换通常用于处理文本数据，如读取文本文件或将数据从网络传输到应用程序。 转换流主要有两种类型：InputStreamReader 和 OutputStreamWriter。">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-10-29T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-10-29T00:00:00+00:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="转换流">
+  <meta name="twitter:description" content="转换流可以将一个字节流包装成字符流，或者将一个字符流包装成字节流。这种转换通常用于处理文本数据，如读取文本文件或将数据从网络传输到应用程序。 转换流主要有两种类型：InputStreamReader 和 OutputStreamWriter。">
+<meta name="application-name" content="主页">
+<meta name="apple-mobile-web-app-title" content="主页">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/javaio/6.-%E8%BD%AC%E6%8D%A2%E6%B5%81/" /><link rel="prev" href="//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/javaio/4.-%E5%AD%97%E7%AC%A6%E6%B5%81/" /><link rel="next" href="//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/1.-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E8%A7%A3%E6%9E%90/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "转换流",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/\/localhost:1313\/posts\/java%E5%9F%BA%E7%A1%80\/javaio\/6.-%E8%BD%AC%E6%8D%A2%E6%B5%81\/"
+        },"genre": "posts","wordcount":  1360 ,
+        "url": "\/\/localhost:1313\/posts\/java%E5%9F%BA%E7%A1%80\/javaio\/6.-%E8%BD%AC%E6%8D%A2%E6%B5%81\/","datePublished": "2025-10-29T00:00:00+00:00","dateModified": "2025-10-29T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "aidenz"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="我的全新 Hugo 网站">主页</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="我的全新 Hugo 网站">主页</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">转换流</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/aidenz0" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>aidenz</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-10-29">2025-10-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1360 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#inputstreamreader">InputStreamReader</a>
+      <ul>
+        <li><a href="#构造方法">构造方法</a></li>
+        <li><a href="#解决编码问题">解决编码问题</a></li>
+      </ul>
+    </li>
+    <li><a href="#outsteamwriter">OutSteamWriter</a></li>
+    <li><a href="#小结">小结</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>转换流可以将一个字节流包装成字符流，或者将一个字符流包装成字节流。这种转换通常用于处理文本数据，如读取文本文件或将数据从网络传输到应用程序。
+转换流主要有两种类型：InputStreamReader 和 OutputStreamWriter。</p>
+<p>InputStreamReader 将一个字节输入流转换为一个字符输入流，而 OutputStreamWriter 将一个字节输出流转换为一个字符输出流。它们使用指定的字符集将字节流和字符流之间进行转换。常用的字符集包括 UTF-8、GBK、ISO-8859-1 等。</p>
+<h2 id="inputstreamreader">InputStreamReader</h2>
+<p><code>java.io.InputStreamReader</code> 是 Reader 类的子类。它的作用是将字节流（InputStream）转换为字符流（Reader），同时支持指定的字符集编码方式，从而实现字符流与字节流之间的转换。</p>
+<h3 id="构造方法">构造方法</h3>
+<ul>
+<li><code>InputStreamReader(InputStream in)</code>: 创建一个使用默认字符集的字符流。</li>
+<li><code>InputStreamReader(InputStream in, String charsetName)</code>: 创建一个指定字符集的字符流。
+代码示例如下：</li>
+</ul>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><pre tabindex="0"><code>InputStreamReader isr = new InputStreamReader(new FileInputStream(&#34;in.txt&#34;));
+InputStreamReader isr2 = new InputStreamReader(new FileInputStream(&#34;in.txt&#34;) , &#34;GBK&#34;);</code></pre></div>
+<h3 id="解决编码问题">解决编码问题</h3>
+<p>下面是一个使用 InputStreamReader 解决乱码问题的示例代码：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;沉默王二！&#34;</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 将字符串按GBK编码方式保存到文件中</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">OutputStreamWriter</span><span class="w"> </span><span class="n">outUtf8</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OutputStreamWriter</span><span class="p">(</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="s">&#34;logs/test_utf8.txt&#34;</span><span class="p">),</span><span class="w"> </span><span class="s">&#34;GBK&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">outUtf8</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">s</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">outUtf8</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 将字节流转换为字符流，使用GBK编码方式</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">InputStreamReader</span><span class="w"> </span><span class="n">isr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">InputStreamReader</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span><span class="s">&#34;logs/test_utf8.txt&#34;</span><span class="p">),</span><span class="w"> </span><span class="s">&#34;GBK&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 读取字符流</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">isr</span><span class="p">.</span><span class="na">read</span><span class="p">())</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="o">-</span><span class="n">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">((</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="n">c</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">isr</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div></div>
+<h2 id="outsteamwriter">OutSteamWriter</h2>
+<p><code>java.io.OutputStreamWriter</code> 是 Writer 的子类，字面看容易误以为是转为字符流，其实是将字符流转换为字节流，是字符流到字节流的桥梁。</p>
+<ul>
+<li><code>OutputStreamWriter(OutputStream in)</code>: 创建一个使用默认字符集的字符流。</li>
+<li><code>OutputStreamWriter(OutputStream in, String charsetName)</code>：创建一个指定字符集的字符流。</li>
+</ul>
+<p>代码示例如下：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">OutputStreamWriter</span><span class="w"> </span><span class="n">isr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OutputStreamWriter</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="s">&#34;a.txt&#34;</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">OutputStreamWriter</span><span class="w"> </span><span class="n">isr2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OutputStreamWriter</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="s">&#34;b.txt&#34;</span><span class="p">)</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="s">&#34;GBK&#34;</span><span class="p">);</span></span></span></code></pre></div></div>
+<p>通常为了提高读写效率，我们会在转换流上再加一层缓冲流，来看代码示例：</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 从文件读取字节流，使用UTF-8编码方式</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">FileInputStream</span><span class="w"> </span><span class="n">fis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileInputStream</span><span class="p">(</span><span class="s">&#34;test.txt&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 将字节流转换为字符流，使用UTF-8编码方式</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">InputStreamReader</span><span class="w"> </span><span class="n">isr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">InputStreamReader</span><span class="p">(</span><span class="n">fis</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;UTF-8&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 使用缓冲流包装字符流，提高读取效率</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">BufferedReader</span><span class="w"> </span><span class="n">br</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedReader</span><span class="p">(</span><span class="n">isr</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 创建输出流，使用UTF-8编码方式</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">FileOutputStream</span><span class="w"> </span><span class="n">fos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FileOutputStream</span><span class="p">(</span><span class="s">&#34;output.txt&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 将输出流包装为转换流，使用UTF-8编码方式</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">OutputStreamWriter</span><span class="w"> </span><span class="n">osw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">OutputStreamWriter</span><span class="p">(</span><span class="n">fos</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;UTF-8&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 使用缓冲流包装转换流，提高写入效率</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">BufferedWriter</span><span class="w"> </span><span class="n">bw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">BufferedWriter</span><span class="p">(</span><span class="n">osw</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 读取输入文件的每一行，写入到输出文件中</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">line</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">((</span><span class="n">line</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">br</span><span class="p">.</span><span class="na">readLine</span><span class="p">())</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">bw</span><span class="p">.</span><span class="na">write</span><span class="p">(</span><span class="n">line</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">bw</span><span class="p">.</span><span class="na">newLine</span><span class="p">();</span><span class="w"> </span><span class="c1">// 每行结束后写入一个换行符</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 关闭流</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">br</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">bw</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div></div>
+<p>在上面的示例代码中，首先使用 FileInputStream 从文件中读取字节流，使用 UTF-8 编码方式进行读取。然后，使用 InputStreamReader 将字节流转换为字符流，使用 UTF-8 编码方式进行转换。接着，使用 BufferedReader 包装字符流，提高读取效率。然后，创建 FileOutputStream 用于输出文件，使用 UTF-8 编码方式进行创建。接着，使用 OutputStreamWriter 将输出流转换为字符流，使用 UTF-8 编码方式进行转换。最后，使用 BufferedWriter 包装转换流，提高写入效率。</p>
+<h2 id="小结">小结</h2>
+<p>InputStreamReader 和 OutputStreamWriter 是将字节流转换为字符流或者将字符流转换为字节流。通常用于解决字节流和字符流之间的转换问题，可以将字节流以指定的字符集编码方式转换为字符流，或者将字符流以指定的字符集编码方式转换为字节流。</p>
+<p>InputStreamReader 类的常用方法包括：</p>
+<ul>
+<li><code>read()</code>：从输入流中读取一个字符的数据。</li>
+<li><code>read(char[] cbuf, int off, int len)</code>：从输入流中读取 len 个字符的数据到指定的字符数组 cbuf 中，从 off 位置开始存放。</li>
+<li><code>ready()</code>：返回此流是否已准备好读取。</li>
+<li><code>close()</code>：关闭输入流。</li>
+</ul>
+<p>OutputStreamWriter 类的常用方法包括：</p>
+<ul>
+<li><code>write(int c)</code>：向输出流中写入一个字符的数据。</li>
+<li><code>write(char[] cbuf, int off, int len)</code>：向输出流中写入指定字符数组 cbuf 中的 len 个字符，从 off 位置开始。</li>
+<li><code>flush()</code>：将缓冲区的数据写入输出流中。</li>
+<li><code>close()</code>：关闭输出流。</li>
+</ul>
+<p>在使用转换流时，需要指定正确的字符集编码方式，否则可能会导致数据读取或写入出现乱码。</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2025-10-29</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/java%E5%9F%BA%E7%A1%80/javaio/4.-%E5%AD%97%E7%AC%A6%E6%B5%81/" class="prev" rel="prev" title="字符流"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>字符流</a>
+            <a href="/posts/java%E5%9F%BA%E7%A1%80/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/1.-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E8%A7%A3%E6%9E%90/" class="next" rel="next" title="异常处理解析">异常处理解析<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/aidenz0" target="_blank">aidenz</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"comment":{}};</script><script src="/js/theme.min.js"></script></body>
+</html>

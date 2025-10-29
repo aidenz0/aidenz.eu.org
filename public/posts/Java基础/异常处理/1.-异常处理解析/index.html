@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>异常处理解析 - 我的全新 Hugo 网站</title><meta name="Description" content="aidenz的个人网站"><meta property="og:url" content="//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/1.-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E8%A7%A3%E6%9E%90/">
+  <meta property="og:site_name" content="我的全新 Hugo 网站">
+  <meta property="og:title" content="异常处理解析">
+  <meta property="og:description" content="“异常是指中断程序正常执行的一个不确定的事件。当异常发生时，程序的正常执行流程就会被打断。一般情况下，程序都会有很多条语句，如果没有异常处理机制，前面的语句一旦出现了异常，后面的语句就没办法继续执行了。”">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-10-29T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-10-29T00:00:00+00:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="异常处理解析">
+  <meta name="twitter:description" content="“异常是指中断程序正常执行的一个不确定的事件。当异常发生时，程序的正常执行流程就会被打断。一般情况下，程序都会有很多条语句，如果没有异常处理机制，前面的语句一旦出现了异常，后面的语句就没办法继续执行了。”">
+<meta name="application-name" content="主页">
+<meta name="apple-mobile-web-app-title" content="主页">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/1.-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E8%A7%A3%E6%9E%90/" /><link rel="prev" href="//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/javaio/6.-%E8%BD%AC%E6%8D%A2%E6%B5%81/" /><link rel="next" href="//localhost:1313/posts/java%E5%9F%BA%E7%A1%80/javaio/7.-%E5%BA%8F%E5%88%97%E6%B5%81/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "异常处理解析",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "\/\/localhost:1313\/posts\/java%E5%9F%BA%E7%A1%80\/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86\/1.-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E8%A7%A3%E6%9E%90\/"
+        },"genre": "posts","wordcount":  1779 ,
+        "url": "\/\/localhost:1313\/posts\/java%E5%9F%BA%E7%A1%80\/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86\/1.-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86%E8%A7%A3%E6%9E%90\/","datePublished": "2025-10-29T00:00:00+00:00","dateModified": "2025-10-29T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "aidenz"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>
+          const query = window.matchMedia('(prefers-color-scheme: dark)');
+          function applyTheme() {
+            let theme = window.localStorage?.getItem('theme') || 'auto';
+            let isDark = theme === 'dark' || (theme === 'auto' && query.matches);
+            document.body.setAttribute('theme', isDark? 'dark' : 'light');
+            document.body.setAttribute('cfg-theme', theme);
+          }
+
+          applyTheme();
+          query.addEventListener('change', applyTheme);
+        </script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="我的全新 Hugo 网站">主页</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="我的全新 Hugo 网站">主页</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">异常处理解析</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://github.com/aidenz0" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>aidenz</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-10-29">2025-10-29</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1779 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#exception和error区别">Exception和Error区别</a></li>
+    <li><a href="#checked和unchecked异常">checked和unchecked异常</a></li>
+    <li><a href="#关于throw和throws">关于throw和throws</a></li>
+    <li><a href="#关于try-catch-finally">关于try-catch-finally</a></li>
+    <li><a href="#小结">小结</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>“异常是指中断程序正常执行的一个不确定的事件。当异常发生时，程序的正常执行流程就会被打断。一般情况下，程序都会有很多条语句，如果没有异常处理机制，前面的语句一旦出现了异常，后面的语句就没办法继续执行了。”</p>
+<p>“有了异常处理机制后，程序在发生异常的时候就不会中断，我们可以对异常进行捕获，然后改变程序执行的流程。”</p>
+<p>“除此之外，异常处理机制可以保证我们向用户提供友好的提示信息，而不是程序原生的异常信息——用户根本理解不了。”</p>
+<p>“不过，站在开发者的角度，我们更希望看到原生的异常信息，因为这有助于我们更快地找到 bug 的根源，反而被过度包装的异常信息会干扰我们的视线。”</p>
+<p>“Java 语言在一开始就提供了相对完善的异常处理机制，这种机制大大降低了编写可靠程序的门槛，这也是 Java 之所以能够</p>
+<h2 id="exception和error区别">Exception和Error区别</h2>
+<p>Error 的出现，意味着程序出现了严重的问题，而这些问题不应该再交给 Java 的异常处理机制来处理，程序应该直接崩溃掉，比如说 OutOfMemoryError，内存溢出了，这就意味着程序在运行时申请的内存大于系统能够提供的内存，导致出现的错误，这种错误的出现，对于程序来说是致命的。</p>
+<p>Exception 的出现，意味着程序出现了一些在可控范围内的问题，我们应当采取措施进行挽救。</p>
+<h2 id="checked和unchecked异常">checked和unchecked异常</h2>
+<p>checked 异常（检查型异常）在源代码里必须显式地捕获或者抛出，否则编译器会提示你进行相应的操作；而 unchecked 异常（非检查型异常）就是所谓的运行时异常，通常是可以通过编码进行规避的，并不需要显式地捕获或者抛出。
+<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/aidenz0/blogImage@main/img/20251029143637.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/aidenz0/blogImage@main/img/20251029143637.png, https://cdn.jsdelivr.net/gh/aidenz0/blogImage@main/img/20251029143637.png 1.5x, https://cdn.jsdelivr.net/gh/aidenz0/blogImage@main/img/20251029143637.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/aidenz0/blogImage@main/img/20251029143637.png"
+        title="image.png" />
+Exception 和 Error 都继承了 Throwable 类。换句话说，只有 Throwable 类（或者子类）的对象才能使用 throw 关键字抛出，或者作为 catch 的参数类型。</p>
+<blockquote>
+<p><strong>面试题</strong>
+NoClassDefFoundError 和 ClassNotFoundException 有什么区别？
+它们都是由于系统运行时找不到要加载的类导致的，但是触发的原因不一样。
+NoClassDefFoundError：程序在编译时可以找到所依赖的类，但是在运行时找不到指定的类文件，导致抛出该错误；原因可能是 jar 包缺失或者调用了初始化失败的类。
+ClassNotFoundException：当动态加载 Class 对象的时候找不到对应的类时抛出该异常；原因可能是要加载的类不存在或者类名写错了。</p></blockquote>
+<h2 id="关于throw和throws">关于throw和throws</h2>
+<p>throw 关键字，用于主动地抛出异常；正常情况下，当除数为 0 的时候，程序会主动抛出 ArithmeticException；但如果我们想要除数为 1 的时候也抛出 ArithmeticException，就可以使用 throw 关键字主动地抛出异常。</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">exception_class</span><span class="p">(</span><span class="s">&#34;error message&#34;</span><span class="p">);</span></span></span></code></pre></div></div>
+<p>1）throws 关键字用于声明异常，它的作用和 try-catch 相似；而 throw 关键字用于显式的抛出异常。</p>
+<p>2）throws 关键字后面跟的是异常的名字；而 throw 关键字后面跟的是异常的对象。</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">throws</span><span class="w"> </span><span class="n">ArithmeticException</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArithmeticException</span><span class="p">(</span><span class="s">&#34;算术异常&#34;</span><span class="p">);</span></span></span></code></pre></div></div>
+<p>3）throws 关键字出现在方法签名上，而 throw 关键字出现在方法体里。</p>
+<p>4）throws 关键字在声明异常的时候可以跟多个，用逗号隔开；而 throw 关键字每次只能抛出一个异常。</p>
+<h2 id="关于try-catch-finally">关于try-catch-finally</h2>
+<p>ry 关键字后面会跟一个大括号 <code>{}</code>，我们把一些可能发生异常的代码放到大括号里；<code>try</code> 块后面一般会跟 <code>catch</code> 块，用来处理发生异常的情况；当然了，异常不一定会发生，为了保证发不发生异常都能执行一些代码，就会跟一个 <code>finally</code> 块。</p>
+<h2 id="小结">小结</h2>
+<p>异常分为两类：Checked Exception 和 Unchecked Exception，其中 Checked Exception 需要在代码中显式地处理或声明抛出，而 Unchecked Exception 不需要在代码中显式地处理或声明抛出。异常处理通常使用 try-catch-finally 块来处理，也可以使用 throws 关键字将异常抛出给调用者处理。</p>
+<p>下面是 Java 异常处理的一些总结：</p>
+<ul>
+<li>使用 try-catch 块捕获并处理异常，可以避免程序因异常而崩溃。</li>
+<li>可以使用多个 catch 块来捕获不同类型的异常，并进行不同的处理。</li>
+<li>可以使用 finally 块来执行一些必要的清理工作，无论是否发生异常都会执行。</li>
+<li>可以使用 throw 关键字手动抛出异常，用于在程序中明确指定某些异常情况。</li>
+<li>可以使用 throws 关键字将异常抛出给调用者处理，用于在方法签名中声明可能会出现的异常。</li>
+<li>Checked Exception 通常是由于外部因素导致的问题，需要在代码中显式地处理或声明抛出。</li>
+<li>Unchecked Exception 通常是由于程序内部逻辑或数据异常导致的，可以不处理或者在需要时进行处理。</li>
+<li>在处理异常时，应该根据具体的异常类型进行处理，例如可以尝试重新打开文件、重新建立网络连接等操作。</li>
+<li>异常处理应该根据具体的业务需求和设计原则进行，避免过度捕获和处理异常，从而降低程序的性能和可维护性。</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2025-10-29</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/java%E5%9F%BA%E7%A1%80/javaio/6.-%E8%BD%AC%E6%8D%A2%E6%B5%81/" class="prev" rel="prev" title="转换流"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>转换流</a>
+            <a href="/posts/java%E5%9F%BA%E7%A1%80/javaio/7.-%E5%BA%8F%E5%88%97%E6%B5%81/" class="next" rel="next" title="序列流">序列流<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://github.com/aidenz0" target="_blank">aidenz</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script>window.config={"comment":{}};</script><script src="/js/theme.min.js"></script></body>
+</html>

@@ -73,79 +73,86 @@
 </header><main class="main">
                 <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"><a href="https://github.com/aidenz0" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/java%E5%9F%BA%E7%A1%80/javaio/%E5%AD%97%E8%8A%82%E6%B5%81/"></a>
-    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/aidenz0" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>aidenz</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"><h1 id="字节输出流">字节输出流</h1>
-<p><code>java.io.OutputStream</code> 是<strong>字节输出流</strong>的<strong>超类</strong>（父类），我们来看一下它定义的一些共性方法：</p>
-<p>1、 <code>close()</code> ：关闭此输出流并释放与此流相关联的系统资源。</p>
-<p>2、 <code>flush()</code> ：刷新此输出流并强制缓冲区的字节被写入到目的地。</p></div><div class="post-footer">
-        <a href="/posts/java%E5%9F%BA%E7%A1%80/javaio/%E5%AD%97%E8%8A%82%E6%B5%81/">Read More</a></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/listsetqueue%E5%92%8Cmap/"></a>
-    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/aidenz0" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>aidenz</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"><h1 id="listsetqueue和map">List、Set、Queue和Map</h1>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="/asset/images/Pasted%20image%2020250916095137.png"
-        data-srcset="/asset/images/Pasted%20image%2020250916095137.png, /asset/images/Pasted%20image%2020250916095137.png 1.5x, /asset/images/Pasted%20image%2020250916095137.png 2x"
-        data-sizes="auto"
-        alt="/asset/images/Pasted%20image%2020250916095137.png"
-        title="/asset/images/Pasted%20image%2020250916095137.png" /></p>
-<p>Java集合框架分类两条大的支线：</p>
-<ol>
-<li>Collection，主要由 List、Set、Queue 组成：</li>
-</ol>
+        <a href="/posts/java%E5%9F%BA%E7%A1%80/javaio/4.-%E5%AD%97%E7%AC%A6%E6%B5%81/">字符流</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/aidenz0" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>aidenz</a></span>&nbsp;<span class="post-publish">published on <time datetime="2025-10-26">2025-10-26</time></span></div><div class="content"><h1 id="字符流">字符流</h1>
+<p><strong>字符流 = 字节流 + 编码表</strong></p>
+<h2 id="字符输入流">字符输入流</h2>
+<p><code>java.io.Reader</code>是<strong>字符输入流</strong>的<strong>超类</strong>（父类），它定义了字符输入流的一些共性方法：</p>
 <ul>
-<li>List 代表有序、可重复的集合，典型代表就是封装了动态数组的 ArrayList和封装了链表的LinkedList；</li>
-<li>Set 代表无序、不可重复的集合，典型代表就是 HashSet 和 TreeSet；</li>
-<li>Queue 代表队列，典型代表就是双端队列 ArrayDeque，以及优先级队列PriorityQueue。</li>
+<li>1、<code>close()</code>：关闭此流并释放与此流相关的系统资源。</li>
+<li>2、<code>read()</code>：从输入流读取一个字符。</li>
+<li>3、<code>read(char[] cbuf)</code>：从输入流中读取一些字符，并将它们存储到字符数组 <code>cbuf</code>中</li>
 </ul>
-<ol start="2">
-<li>Map，代表键值对的集合，典型代表就是HashMap。</li>
-</ol>
-<h2 id="1-list">1. list</h2>
-<p>List 的特点是存取有序，可以存放重复的元素，可以用下标对元素进行操作。</p></div><div class="post-footer">
-        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/listsetqueue%E5%92%8Cmap/">Read More</a></div>
+<p>FileReader 是 Reader 的子类，用于从文件中读取字符数据。它的主要特点如下：</p></div><div class="post-footer">
+        <a href="/posts/java%E5%9F%BA%E7%A1%80/javaio/4.-%E5%AD%97%E7%AC%A6%E6%B5%81/">Read More</a></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/final-%E5%85%B3%E9%94%AE%E5%AD%97/"></a>
-    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/aidenz0" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>aidenz</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"><h3 id="final-关键字">final 关键字</h3>
-<h4 id="final-变量">final 变量</h4>
-<p>被 final 修饰的变量无法重新赋值。换句话说，final 变量一旦初始化，就无法更改。
-final 修饰的成员变量必须有一个默认值，否则编译器将会提醒没有初始化。</p></div><div class="post-footer">
-        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/final-%E5%85%B3%E9%94%AE%E5%AD%97/">Read More</a></div>
+        <a href="/posts/dify/dify%E4%BF%AE%E6%94%B9%E5%B5%8C%E5%85%A5%E8%81%8A%E5%A4%A9%E6%A1%86%E7%9A%84power-by%E5%9B%BE%E6%A0%87/">dify修改嵌入聊天框的power by图标</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/aidenz0" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>aidenz</a></span>&nbsp;<span class="post-publish">published on <time datetime="2025-10-25">2025-10-25</time></span></div><div class="content"><h2 id="背景">背景</h2>
+<p>最近近期公司需要使用dify框架开发一个公司网站的AI客服助手，但是嵌入网站时会显示powered by dify。有dify的logo。</p>
+<h2 id="版本">版本</h2>
+<p>dify版本：1.9.1
+docker部署</p></div><div class="post-footer">
+        <a href="/posts/dify/dify%E4%BF%AE%E6%94%B9%E5%B5%8C%E5%85%A5%E8%81%8A%E5%A4%A9%E6%A1%86%E7%9A%84power-by%E5%9B%BE%E6%A0%87/">Read More</a></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-instanceof/"></a>
-    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/aidenz0" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>aidenz</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"><h3 id="java-instanceof">Java instanceof</h3>
-<p>用意也非常简单，判断对象是否符合指定的类型，结果要么是 true，要么是 false。</p>
+        <a href="/posts/java%E5%9F%BA%E7%A1%80/javaio/2.-%E6%96%87%E4%BB%B6%E6%B5%81/"></a>
+    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/aidenz0" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>aidenz</a></span>&nbsp;<span class="post-publish">published on <time datetime="2025-10-17">2025-10-17</time></span></div><div class="content"><p><code>java.io.File</code> 类是专门对文件进行操作的类，注意只能对文件本身进行操作，不能对文件内容进行操作，想要操作内容，必须借助输入输出流。</p>
+<p><code>File</code> 类是文件和文件夹的抽象表示，主要用于文件和文件夹的创建、查找和删除等操作。</p></div><div class="post-footer">
+        <a href="/posts/java%E5%9F%BA%E7%A1%80/javaio/2.-%E6%96%87%E4%BB%B6%E6%B5%81/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/iterator%E5%92%8Citerable%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/">Iterator和Iterable有什么区别</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/aidenz0" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>aidenz</a></span>&nbsp;<span class="post-publish">published on <time datetime="2025-10-16">2025-10-16</time></span></div><div class="content"><p>Iterator 是个接口，JDK 1.2 的时候就有了，用来改进 Enumeration 接口：</p>
+<ul>
+<li>允许删除元素（增加了 remove 方法）</li>
+<li>优化了方法名（Enumeration 中是 hasMoreElements 和 nextElement，不简洁）
+ Iterator 的源码：
+ <code>java  public interface Iterator&lt;E&gt; { // 判断集合中是否存在下一个对象 boolean hasNext(); // 返回集合中的下一个对象，并将访问指针移动一位 E next(); // 删除集合中调用next()方法返回的对象 default void remove() { throw new UnsupportedOperationException(&quot;remove&quot;); } }  </code>
+JDK 1.8 时，Iterable 接口中新增了 forEach 方法。该方法接受一个 Consumer 对象作为参数，用于对集合中的每个元素执行指定的操作。该方法的实现方式是使用 for-each 循环遍历集合中的元素，对于每个元素，调用 Consumer 对象的 accept 方法执行指定的操作。</li>
+</ul>
 <div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
     <div class="code-header language-java">
         <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
         <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
         <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="p">)</span></span></span></code></pre></div></div></div><div class="post-footer">
-        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-instanceof/">Read More</a></div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">default</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">forEach</span><span class="p">(</span><span class="n">Consumer</span><span class="o">&lt;?</span><span class="w"> </span><span class="kd">super</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">action</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">Objects</span><span class="p">.</span><span class="na">requireNonNull</span><span class="p">(</span><span class="n">action</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">t</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="k">this</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">action</span><span class="p">.</span><span class="na">accept</span><span class="p">(</span><span class="n">t</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div></div>
+<p>该方法实现时首先会对 action 参数进行非空检查，如果为 null 则抛出 NullPointerException 异常。然后使用 for-each 循环遍历集合中的元素，并对每个元素调用 action.accept(t) 方法执行指定的操作。由于 Iterable 接口是 Java 集合框架中所有集合类型的基本接口，因此该方法可以被所有实现了 Iterable 接口的集合类型使用。
+它对 Iterable 的每个元素执行给定操作，具体指定的操作需要自己写Consumer接口通过accept方法回调出来。</p></div><div class="post-footer">
+        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/iterator%E5%92%8Citerable%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB/">Read More</a></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-this%E5%92%8Csuper%E5%85%B3%E9%94%AE%E5%AD%97/"></a>
-    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/aidenz0" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>aidenz</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"><h3 id="javathis和super关键字">Javathis和super关键字</h3>
-<h4 id="this">this</h4>
-<ul>
-<li>调用当前类的方法；</li>
-<li><code>this()</code>  可以调用当前类的构造方法；</li>
-<li>this 可以作为参数在方法中传递；</li>
-<li>this 可以作为参数在构造方法中传递；</li>
-<li>this 可以作为方法的返回值，返回当前类的对象</li>
-</ul>
-<h4 id="super">super</h4>
-<ul>
-<li>指向父类对象；</li>
-<li>调用父类的方法；</li>
-<li><code>super()</code>  可以调用父类的构造方法。</li>
-</ul></div><div class="post-footer">
-        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-this%E5%92%8Csuper%E5%85%B3%E9%94%AE%E5%AD%97/">Read More</a></div>
+        <a href="/posts/java%E5%9F%BA%E7%A1%80/javaio/1.-io-%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/">IO 知识体系</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/aidenz0" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>aidenz</a></span>&nbsp;<span class="post-publish">published on <time datetime="2025-10-16">2025-10-16</time></span></div><div class="content"><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/aidenz0/blogImage@main/img/shangtou-01.png"
+        data-srcset="https://cdn.jsdelivr.net/gh/aidenz0/blogImage@main/img/shangtou-01.png, https://cdn.jsdelivr.net/gh/aidenz0/blogImage@main/img/shangtou-01.png 1.5x, https://cdn.jsdelivr.net/gh/aidenz0/blogImage@main/img/shangtou-01.png 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/aidenz0/blogImage@main/img/shangtou-01.png"
+        title="shangtou-01.png" /></p>
+<h2 id="初识io">初识IO</h2>
+<p>IO，即in和out，也就是输入和输出，指应用程序和外部设备之间的数据传递，常见的外部设备包括文件、管道、网络连接。</p>
+<p>Java 中是通过流处理IO 的，那么什么是流？</p></div><div class="post-footer">
+        <a href="/posts/java%E5%9F%BA%E7%A1%80/javaio/1.-io-%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/">Read More</a></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E4%BB%A3%E7%A0%81%E5%88%9D%E5%A7%8B%E5%8C%96%E5%9D%97/"></a>
-    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/aidenz0" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>aidenz</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"><h3 id="java-代码初始化块">Java 代码初始化块</h3>
-<p>![[Pasted image 20250820164453.png]]</p></div><div class="post-footer">
-        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E4%BB%A3%E7%A0%81%E5%88%9D%E5%A7%8B%E5%8C%96%E5%9D%97/">Read More</a></div>
+        <a href="/posts/test/">Test</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/aidenz0" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>aidenz</a></span>&nbsp;<span class="post-publish">published on <time datetime="2025-10-10">2025-10-10</time></span></div><div class="content"><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://cdn.jsdelivr.net/gh/aidenz0/blogImage@main/img/297aa9eaf4e6c80405e7857a15206c93.jpeg"
+        data-srcset="https://cdn.jsdelivr.net/gh/aidenz0/blogImage@main/img/297aa9eaf4e6c80405e7857a15206c93.jpeg, https://cdn.jsdelivr.net/gh/aidenz0/blogImage@main/img/297aa9eaf4e6c80405e7857a15206c93.jpeg 1.5x, https://cdn.jsdelivr.net/gh/aidenz0/blogImage@main/img/297aa9eaf4e6c80405e7857a15206c93.jpeg 2x"
+        data-sizes="auto"
+        alt="https://cdn.jsdelivr.net/gh/aidenz0/blogImage@main/img/297aa9eaf4e6c80405e7857a15206c93.jpeg"
+        title="297aa9eaf4e6c80405e7857a15206c93.jpeg" /></p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-python">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">()</span></span></span></code></pre></div></div></div><div class="post-footer">
+        <a href="/posts/test/">Read More</a></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -163,8 +170,10 @@ final 修饰的成员变量必须有一个默认值，否则编译器将会提�
                         <a href="/page/4/">4</a>
                     </span>
                 </li><li class="page-item ">
+                    <span class="page-link" aria-hidden="true">&hellip;</span>
+                </li><li class="page-item ">
                     <span class="page-link">
-                        <a href="/page/5/">5</a>
+                        <a href="/page/6/">6</a>
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">

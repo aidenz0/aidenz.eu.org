@@ -73,109 +73,95 @@
 </header><main class="main">
                 <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"><a href="https://github.com/aidenz0" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E5%86%85%E9%83%A8%E7%B1%BB/"></a>
-    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/aidenz0" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>aidenz</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"><h3 id="java内部类">Java内部类</h3>
-<h4 id="成员内部类">成员内部类</h4>
-<p>成员内部类是最常见的内部类</p>
+        <a href="/posts/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"></a>
+    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/aidenz0" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>aidenz</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"><h1 id="git-设置用户名和邮箱">git 设置用户名和邮箱</h1>
+<p>全局配置用户名和邮箱</p>
+<p>全局配置适用于所有仓库：</p>
 <div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
-    <div class="code-header language-java">
+    <div class="code-header language-shell">
         <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
         <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
         <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="w"> </span><span class="kd">class</span> <span class="nc">Wanger</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">18</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">class</span> <span class="nc">Wangxiaoer</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">81</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div></div>
-<p>看起来内部类 Wangxiaoer 就好像 Wanger 的一个成员，成员内部类可以无限制访问外部类的所有成员属性。</p></div><div class="post-footer">
-        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E5%86%85%E9%83%A8%E7%B1%BB/">Read More</a></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E6%8A%BD%E8%B1%A1%E7%B1%BB/"></a>
-    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/aidenz0" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>aidenz</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"><h3 id="java-抽象类">Java 抽象类</h3>
-<h4 id="定义抽象类">定义抽象类</h4>
-<p>定义抽象类的时候需要用到关键字  <code>abstract</code>，放在  <code>class</code>  关键字前，就像下面这样。</p>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git config --global user.name <span class="s2">&#34;你的用户名&#34;</span>
+</span></span><span class="line"><span class="cl">git config --global user.email <span class="s2">&#34;你的邮箱@example.com&#34;</span></span></span></code></pre></div></div>
+<p><strong>验证配置是否成功：</strong></p>
 <div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
-    <div class="code-header language-java">
+    <div class="code-header language-shell">
         <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
         <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
         <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AbstractPlayer</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div></div>
-<h4 id="抽象类的特征">抽象类的特征</h4>
-<p>抽象类是不能实例化的，尝试通过  <code>new</code>  关键字实例化的话，编译器会报错，提示“类是抽象的，不能实例化”。
-虽然抽象类不能实例化，但可以有子类。子类通过  <code>extends</code>  关键字来继承抽象类。就像下面这样。</p></div><div class="post-footer">
-        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E6%8A%BD%E8%B1%A1%E7%B1%BB/">Read More</a></div>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">git config --global user.name
+</span></span><span class="line"><span class="cl">git config --global user.email</span></span></code></pre></div></div></div><div class="post-footer">
+        <a href="/posts/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">Read More</a></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E6%8E%A5%E5%8F%A3/"></a>
-    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/aidenz0" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>aidenz</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"><h3 id="java接口">Java接口</h3>
-<p>接口通过 interface 关键字来定义，它可以包含一些常量和方法，来看下面这个示例。</p>
-<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
-    <div class="code-header language-java">
-        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
-        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
-        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Electronic</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 常量</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">LED</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;LED&#34;</span><span class="p">;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 抽象方法</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">getElectricityUse</span><span class="p">();</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 静态方法</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">isEnergyEfficient</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">electtronicType</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">electtronicType</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">LED</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 默认方法</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">default</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">printDescription</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;电子&#34;</span><span class="p">);</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div></div>
-<p><strong>接口中定义的变量会在编译的时候自动加上  <code>public static final</code>  修饰符</strong>
-<strong>没有使用  <code>private</code>、<code>default</code>  或者  <code>static</code>  关键字修饰的方法是隐式抽象的</strong>，在编译的时候会自动加上  <code>public abstract</code>  修饰符。
-<strong>从 Java 8 开始，接口中允许有静态方法</strong>，接口中定义静态方法的目的是为了提供一种简单的机制，使我们不必创建对象就能调用方法，从而提高接口的竞争力。
-<strong>接口中允许定义  <code>default</code>  方法</strong>
-允许在接口中定义默认方法的理由很充分，因为一个接口可能有多个实现类，这些类就必须实现接口中定义的抽象类，否则编译器就会报错。假如我们需要在所有的实现类中追加某个具体的方法，在没有  <code>default</code>  方法的帮助下，我们就必须挨个对实现类进行修改。
-<strong>接口不允许直接实例化</strong>，否则编译器会报错。
-需要定义一个类去实现接口，见下例。</p></div><div class="post-footer">
-        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E6%8E%A5%E5%8F%A3/">Read More</a></div>
+        <a href="/posts/java%E5%9F%BA%E7%A1%80/javaio/3.-%E5%AD%97%E8%8A%82%E6%B5%81/"></a>
+    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/aidenz0" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>aidenz</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"><h1 id="字节输出流">字节输出流</h1>
+<p><code>java.io.OutputStream</code> 是<strong>字节输出流</strong>的<strong>超类</strong>（父类），我们来看一下它定义的一些共性方法：</p>
+<p>1、 <code>close()</code> ：关闭此输出流并释放与此流相关联的系统资源。</p>
+<p>2、 <code>flush()</code> ：刷新此输出流并强制缓冲区的字节被写入到目的地。</p></div><div class="post-footer">
+        <a href="/posts/java%E5%9F%BA%E7%A1%80/javaio/3.-%E5%AD%97%E8%8A%82%E6%B5%81/">Read More</a></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E6%9E%9A%E4%B8%BE/"></a>
-    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/aidenz0" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>aidenz</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"><h3 id="java-枚举">Java 枚举</h3>
-<p>枚举（enum），是 Java 1.5 时引入的关键字，它表示一种特殊类型的类，继承自 java.lang.Enum。
-新建一个枚举。</p>
-<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
-    <div class="code-header language-java">
-        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
-        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
-        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
-    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">enum</span><span class="w"> </span><span class="n">PlayerType</span><span class="w"> </span><span class="p">{</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">TENNIS</span><span class="p">,</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">FOOTBALL</span><span class="p">,</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">BASKETBALL</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div></div>
-<p>其反编译后的字节码。</p></div><div class="post-footer">
-        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E6%9E%9A%E4%B8%BE/">Read More</a></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E6%B3%A8%E8%A7%A3/"></a>
-    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/aidenz0" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>aidenz</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"><h3 id="java注解">Java注解</h3>
-<p>注解（Annotation）是在 Java 1.5 时引入的概念，同 class 和 interface 一样，也属于一种类型。注解提供了一系列数据用来装饰程序代码（类、方法、字段等），但是注解并不是所装饰代码的一部分，它对代码的运行效果没有直接影响，由编译器决定该执行哪些操作。
-注解的生命周期有 3 种策略，定义在 RetentionPolicy 枚举中。
-1）SOURCE：在源文件中有效，被编译器丢弃。</p></div><div class="post-footer">
-        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E6%B3%A8%E8%A7%A3/">Read More</a></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%E4%BF%AE%E9%A5%B0%E7%AC%A6/"></a>
-    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/aidenz0" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>aidenz</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"><h3 id="java-访问权限修饰符">Java 访问权限修饰符</h3>
-<h4 id="修饰方法和变量">修饰方法和变量</h4>
+        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/listsetqueue%E5%92%8Cmap/"></a>
+    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/aidenz0" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>aidenz</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"><h1 id="listsetqueue和map">List、Set、Queue和Map</h1>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/asset/images/Pasted%20image%2020250916095137.png"
+        data-srcset="/asset/images/Pasted%20image%2020250916095137.png, /asset/images/Pasted%20image%2020250916095137.png 1.5x, /asset/images/Pasted%20image%2020250916095137.png 2x"
+        data-sizes="auto"
+        alt="/asset/images/Pasted%20image%2020250916095137.png"
+        title="/asset/images/Pasted%20image%2020250916095137.png" /></p>
+<p>Java集合框架分类两条大的支线：</p>
+<ol>
+<li>Collection，主要由 List、Set、Queue 组成：</li>
+</ol>
 <ul>
-<li>默认访问权限（包访问权限）：如果一个类的方法或变量被包访问权限修饰，也就意味着只能在同一个包中的其他类中显示地调用该类的方法或者变量，在不同包中的类中不能显式地调用该类的方法或变量。</li>
-<li>private：如果一个类的方法或者变量被 private 修饰，那么这个类的方法或者变量只能在该类本身中被访问，在类外以及其他类中都不能显式的进行访问。</li>
-<li>protected：如果一个类的方法或者变量被 protected 修饰，对于同一个包的类，这个类的方法或变量是可以被访问的。对于不同包的类，只有继承于该类的类才可以访问到该类的方法或者变量。</li>
-<li>public：被 public 修饰的方法或者变量，在任何地方都是可见的。</li>
+<li>List 代表有序、可重复的集合，典型代表就是封装了动态数组的 ArrayList和封装了链表的LinkedList；</li>
+<li>Set 代表无序、不可重复的集合，典型代表就是 HashSet 和 TreeSet；</li>
+<li>Queue 代表队列，典型代表就是双端队列 ArrayDeque，以及优先级队列PriorityQueue。</li>
+</ul>
+<ol start="2">
+<li>Map，代表键值对的集合，典型代表就是HashMap。</li>
+</ol>
+<h2 id="1-list">1. list</h2>
+<p>List 的特点是存取有序，可以存放重复的元素，可以用下标对元素进行操作。</p></div><div class="post-footer">
+        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9B%86%E5%90%88%E6%A1%86%E6%9E%B6/listsetqueue%E5%92%8Cmap/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/final-%E5%85%B3%E9%94%AE%E5%AD%97/"></a>
+    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/aidenz0" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>aidenz</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"><h3 id="final-关键字">final 关键字</h3>
+<h4 id="final-变量">final 变量</h4>
+<p>被 final 修饰的变量无法重新赋值。换句话说，final 变量一旦初始化，就无法更改。
+final 修饰的成员变量必须有一个默认值，否则编译器将会提醒没有初始化。</p></div><div class="post-footer">
+        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/final-%E5%85%B3%E9%94%AE%E5%AD%97/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-instanceof/"></a>
+    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/aidenz0" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>aidenz</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"><h3 id="java-instanceof">Java instanceof</h3>
+<p>用意也非常简单，判断对象是否符合指定的类型，结果要么是 true，要么是 false。</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="p">(</span><span class="n">object</span><span class="p">)</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="p">(</span><span class="n">type</span><span class="p">)</span></span></span></code></pre></div></div></div><div class="post-footer">
+        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-instanceof/">Read More</a></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-this%E5%92%8Csuper%E5%85%B3%E9%94%AE%E5%AD%97/"></a>
+    </h1><div class="post-meta"><span class="post-author"><a href="https://github.com/aidenz0" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>aidenz</a></span>&nbsp;<span class="post-publish">published on <time datetime="0001-01-01">0001-01-01</time></span></div><div class="content"><h3 id="javathis和super关键字">Javathis和super关键字</h3>
+<h4 id="this">this</h4>
+<ul>
+<li>调用当前类的方法；</li>
+<li><code>this()</code>  可以调用当前类的构造方法；</li>
+<li>this 可以作为参数在方法中传递；</li>
+<li>this 可以作为参数在构造方法中传递；</li>
+<li>this 可以作为方法的返回值，返回当前类的对象</li>
+</ul>
+<h4 id="super">super</h4>
+<ul>
+<li>指向父类对象；</li>
+<li>调用父类的方法；</li>
+<li><code>super()</code>  可以调用父类的构造方法。</li>
 </ul></div><div class="post-footer">
-        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90%E4%BF%AE%E9%A5%B0%E7%AC%A6/">Read More</a></div>
+        <a href="/posts/java%E5%9F%BA%E7%A1%80/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B/java-this%E5%92%8Csuper%E5%85%B3%E9%94%AE%E5%AD%97/">Read More</a></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -195,6 +181,10 @@
                 </li><li class="page-item ">
                     <span class="page-link">
                         <a href="/page/5/">5</a>
+                    </span>
+                </li><li class="page-item ">
+                    <span class="page-link">
+                        <a href="/page/6/">6</a>
                     </span>
                 </li></ul></div></div>
             </main><footer class="footer">
